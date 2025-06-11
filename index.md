@@ -3,13 +3,29 @@
 layout: default
 ---
 
-# Ashley Wenwa
+# 👋 Hi, I'm Ashley Wenwa
 
-**Cloud Security | SIEM | CyberShujaa Certified**
+**Cloud Security Enthusiast | SIEM Engineer in Training | CyberShujaa Certified**
 
-Welcome to my cybersecurity portfolio. I’m a detail-oriented security enthusiast with a background in mathematics and computer science, passionate about cloud security, malware analysis, and SIEM tooling.
+Welcome to my cybersecurity portfolio — a showcase of the projects, labs, and tools I’ve built as part of my journey into the world of digital defense. I'm passionate about cloud security, system monitoring, threat detection, and solving real-world security challenges.
 
-### Highlights
-- Experience with log monitoring, Python automation, and threat visualization.
-- Hands-on skills in setting up honeypots, port scanners, and lightweight SIEM solutions.
-- Familiar with Linux environments, network analysis, and CTF-style labs.
+With a foundation in Mathematics and Computer Science, my strengths include analytical thinking, hands-on problem-solving, and a growing expertise in network defense and secure systems.
+
+---
+
+### 🔧 Core Competencies
+- Log analysis & alerting (custom Python SIEM, Wazuh)
+- Threat detection & honeypot deployment
+- Python scripting for automation and scanning
+- CTFs, lab environments, and simulated attacks
+
+---
+
+### 🚀 Projects
+Explore what I've built in the [Projects](projects.md) section.
+
+### 🧪 Labs & CTFs
+Read hands-on challenge walkthroughs in the [Lab Challenges](labs.md) section.
+
+### 📩 Get in Touch
+Find my professional links and contact info on the [Contact](contact.md) page.

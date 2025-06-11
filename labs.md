@@ -1,14 +1,30 @@
 
-## 🔍 Lab Challenges
+---
+layout: default
+title: Lab Challenges
+---
 
-### TryHackMe: Simple CTF
-- **Problem:** Gain access to a basic vulnerable machine and escalate privileges.
-- **Approach:** Used gobuster, SSH enumeration, privilege escalation with LinPEAS.
-- **Tools:** gobuster, hydra, nmap, linpeas.sh
-- **Lessons Learned:** How to identify hidden directories, crack weak credentials, and escalate using kernel exploits.
+# 🧪 CTFs & Lab Challenges
 
-### CyberShujaa Lab: Network Defense Basics
-- **Problem:** Detect and block basic attacks on a simulated enterprise network.
-- **Approach:** Used Wireshark to monitor suspicious activity and configured firewall rules.
-- **Tools:** Wireshark, iptables, fail2ban
-- **Lessons Learned:** Improved understanding of real-time monitoring and configuring host-based defenses.
+These hands-on labs showcase my ability to apply concepts in practical scenarios — from penetration testing to network defense.
+
+---
+
+## 🔍 TryHackMe: Simple CTF
+- **Challenge:** Break into a basic web server and gain root access.
+- **Approach:**
+  - Enumerated hidden directories using `gobuster`
+  - Discovered weak SSH credentials
+  - Escalated privileges using a kernel exploit via `LinPEAS`
+- **Tools Used:** gobuster, Hydra, LinPEAS, netcat
+- **Key Takeaway:** Strengthened understanding of web exploitation and Linux privilege escalation.
+
+---
+
+## 🛡️ CyberShujaa Lab: Network Defense Basics
+- **Challenge:** Detect and block attacks in a simulated enterprise network.
+- **Approach:**
+  - Captured packets in Wireshark to identify malicious behavior
+  - Hardened firewall settings using `iptables` and `fail2ban`
+- **Tools Used:** Wireshark, iptables, Fail2Ban, Linux
+- **Key Takeaway:** Gained hands-on practice in monitoring and host-based intrusion prevention.
