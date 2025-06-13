@@ -5,34 +5,114 @@
   <meta charset="UTF-8">
   <title>Ashley Wenwa | Cybersecurity Portfolio</title>
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script src="https://unpkg.com/scrollreveal"></script>
 </head>
-<body>
+<body class="light-mode">
 
 <header>
-  <h1>Ashley Wenwa</h1> 
-  <div class="profile-photo">
-  <img src="assets/images/ashley-photo.jpg" alt="Ashley Wenwa">
-</div>
-  <p>Cloud Security | SIEM | CyberShujaa Certified</p>
+  <div><strong>Ashley Wenwa</strong></div>
   <nav>
-    <a href="index.html">Home</a>
-    <a href="projects.html">Projects</a>
-    <a href="labs.html">Labs</a>
-    <a href="resume.html">Resume</a>
-    <a href="contact.html">Contact</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#labs">Labs</a>
+    <a href="#resume">Resume</a>
+    <a href="#contact">Contact</a>
+    <button class="toggle-darkmode" onclick="document.body.classList.toggle('dark-mode')">🌓</button>
   </nav>
 </header>
 
-<section>
-  
-<h2>Welcome</h2>
-<p>I'm Ashley, a passionate cybersecurity practitioner specializing in cloud security, SIEM, and offensive security labs. Explore my projects and labs below.</p>
+<section id="about" class="reveal">
+  <h2>👋 About Me</h2>
+  <p>I’m Ashley, a cybersecurity enthusiast with skills in cloud security, SIEM, and threat detection. I enjoy building real-world tools, analyzing attacks, and securing systems.</p>
+</section>
 
+<section id="projects" class="reveal">
+<h2>💻 Projects</h2>
+
+<div class="card">
+  <h3>Python SIEM Tool</h3>
+  <p>Developed a lightweight SIEM in Python to monitor Linux log files in real time, trigger security alerts, and generate visual reports of events. Integrated basic rule-matching and log parsing using regex.</p>
+  <ul>
+    <li>Parsed syslog/auth.log for suspicious activity</li>
+    <li>Triggered alerts for failed logins and privilege escalation attempts</li>
+    <li>Plotted time-based log trends using Matplotlib</li>
+    <li><strong>Tools Used:</strong> Python, Regex, Matplotlib, Linux</li>
+  </ul>
+  <a href="https://github.com/WENWA444/Python-SIEM-Tool" target="_blank">View on GitHub</a>
+</div>
+
+<div class="card">
+  <h3>Honeypot in the Cloud</h3>
+  <p>Deployed a cloud-based honeypot on a hardened Ubuntu VM to lure and analyze attackers. Logged malicious activity, captured attacker IPs, tools, and behavior, and generated visual threat reports.</p>
+  <ul>
+    <li>Set up SSH and file system monitoring</li>
+    <li>Captured indicators of compromise (IOCs) and attacker patterns</li>
+    <li>Created Power BI dashboards from parsed log files</li>
+    <li><strong>Tools Used:</strong> Ubuntu, Fail2Ban, Python, Power BI</li>
+  </ul>
+  <a href="https://github.com/WENWA444/Honeypot-Project" target="_blank">View on GitHub</a>
+</div>
+
+<div class="card">
+  <h3>Python Port Scanner</h3>
+  <p>Created a multi-threaded port scanner supporting TCP and UDP scan modes. Captured service banners and supported scan logging for post-analysis. Included CLI options for scanning multiple targets.</p>
+  <ul>
+    <li>Used Python sockets and threading to parallelize scans</li>
+    <li>Identified open ports and common services</li>
+    <li>Logged results and banner data to file for reuse</li>
+    <li><strong>Tools Used:</strong> Python, socket, threading, Kali Linux</li>
+  </ul>
+  <a href="https://github.com/WENWA444/Port-Scanner" target="_blank">View on GitHub</a>
+</div>
+</section>
+
+<section id="labs" class="reveal">
+  <h2>🧪 Labs & CTFs</h2>
+  <div class="card"><h3>TryHackMe CTF</h3><p>Enumeration, login cracking, and local privilege escalation.</p></div>
+  <div class="card"><h3>CyberShujaa Network Lab</h3><p>Wireshark, iptables, and Fail2Ban to monitor and defend.</p></div>
+</section>
+
+<section id="resume" class="reveal">
+  <h2>📄 Resume</h2>
+  <ul>
+    <li><strong>Education:</strong> BSc Mathematics & Computer Science – Kenyatta University (July 2024)</li>
+    <li><strong>Experience:</strong> Data Analyst (Freelancer), UN Volunteer</li>
+    <li><strong>Certifications:</strong> CyberShujaa, TryHackMe Badges</li>
+    <li><strong>Skills:</strong> Python, SQL, Azure, SIEM, Kali Linux, Power BI</li>
+  </ul>
+  <p style="text-align:center;"><a href="assets/Ashley_Wenwa_CV.pdf" class="cv-button" target="_blank">Download My CV</a></p>
+</section>
+
+<section id="contact" class="reveal">
+  <h2>📬 Contact Me</h2>
+  <form name="contact" method="POST" data-netlify="true">
+    <p><label>Name:<br><input type="text" name="name" required></label></p>
+    <p><label>Email:<br><input type="email" name="email" required></label></p>
+    <p><label>Message:<br><textarea name="message" rows="5" required></textarea></label></p>
+    <p><button type="submit">Send</button></p>
+  </form>
+  <p>
+    <i class="fas fa-envelope"></i> wenwaashley@gmail.com<br>
+    <i class="fab fa-github"></i> github.com/WENWA444<br>
+    <i class="fab fa-linkedin"></i> linkedin.com/in/ashley-wenwa<br>
+    <i class="fas fa-phone"></i> 0787998416
+  </p>
 </section>
 
 <footer>
   &copy; 2025 Ashley Wenwa | Built with 💻 & ☕
 </footer>
+
+<script>
+  ScrollReveal().reveal('.reveal', {
+    distance: '40px',
+    duration: 1000,
+    easing: 'ease-in-out',
+    origin: 'bottom',
+    interval: 200
+  });
+</script>
 
 </body>
 </html>
