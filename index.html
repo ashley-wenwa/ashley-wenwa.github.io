@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <title>Ashley Wenwa | Cybersecurity Portfolio</title>
   <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <script src="https://unpkg.com/scrollreveal"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body class="light-mode">
 
@@ -22,61 +22,53 @@
   </nav>
 </header>
 
+<div style="text-align:center;"><img src="assets/img/profile.jpg" alt="Ashley Wenwa" style="width:180px; border-radius: 50%; margin-top: 40px;"></div>
+
 <section id="about" class="reveal">
   <h2>👋 About Me</h2>
   <p>I’m Ashley, a cybersecurity enthusiast with skills in cloud security, SIEM, and threat detection. I enjoy building real-world tools, analyzing attacks, and securing systems.</p>
 </section>
 
 <section id="projects" class="reveal">
-<h2>💻 Projects</h2>
-
-<div class="card">
-  <h3>Python SIEM Tool</h3>
-  <p>Developed a lightweight SIEM in Python to monitor Linux log files in real time, trigger security alerts, and generate visual reports of events. Integrated basic rule-matching and log parsing using regex.</p>
-  <ul>
-    <li>Parsed syslog/auth.log for suspicious activity</li>
-    <li>Triggered alerts for failed logins and privilege escalation attempts</li>
-    <li>Plotted time-based log trends using Matplotlib</li>
-    <li><strong>Tools Used:</strong> Python, Regex, Matplotlib, Linux</li>
-  </ul>
-  <a href="https://github.com/WENWA444/Python-SIEM-Tool" target="_blank">View on GitHub</a>
-</div>
-
-<div class="card">
-  <h3>Honeypot in the Cloud</h3>
-  <p>Deployed a cloud-based honeypot on a hardened Ubuntu VM to lure and analyze attackers. Logged malicious activity, captured attacker IPs, tools, and behavior, and generated visual threat reports.</p>
-  <ul>
-    <li>Set up SSH and file system monitoring</li>
-    <li>Captured indicators of compromise (IOCs) and attacker patterns</li>
-    <li>Created Power BI dashboards from parsed log files</li>
-    <li><strong>Tools Used:</strong> Ubuntu, Fail2Ban, Python, Power BI</li>
-  </ul>
-  <a href="https://github.com/WENWA444/Honeypot-Project" target="_blank">View on GitHub</a>
-</div>
-
-<div class="card">
-  <h3>Python Port Scanner</h3>
-  <p>Created a multi-threaded port scanner supporting TCP and UDP scan modes. Captured service banners and supported scan logging for post-analysis. Included CLI options for scanning multiple targets.</p>
-  <ul>
-    <li>Used Python sockets and threading to parallelize scans</li>
-    <li>Identified open ports and common services</li>
-    <li>Logged results and banner data to file for reuse</li>
-    <li><strong>Tools Used:</strong> Python, socket, threading, Kali Linux</li>
-  </ul>
-  <a href="https://github.com/WENWA444/Port-Scanner" target="_blank">View on GitHub</a>
-</div>
+  <h2>💻 Projects</h2>
+  <div class="card">
+    <h3>Python SIEM Tool</h3>
+    <p>Lightweight SIEM to tail logs, detect patterns, and visualize alerts. Parsed auth.log, matched failed logins, and visualized with Matplotlib.</p>
+    <ul>
+      <li>Real-time monitoring and alerting</li>
+      <li>Log parsing with Regex</li>
+      <li>Visualization with Matplotlib</li>
+    </ul>
+    <a href="https://github.com/WENWA444/Python-SIEM-Tool" target="_blank">View on GitHub</a>
+  </div>
+  <div class="card">
+    <h3>Honeypot in the Cloud</h3>
+    <p>Deployed Ubuntu honeypot, logged attacker behavior, analyzed trends using Power BI.</p>
+    <a href="https://github.com/WENWA444/Honeypot-Project" target="_blank">View on GitHub</a>
+  </div>
+  <div class="card">
+    <h3>Python Port Scanner</h3>
+    <p>Created threaded TCP/UDP scanner with banner grabbing. CLI-friendly and effective for reconnaissance.</p>
+    <a href="https://github.com/WENWA444/Port-Scanner" target="_blank">View on GitHub</a>
+  </div>
 </section>
 
 <section id="labs" class="reveal">
   <h2>🧪 Labs & CTFs</h2>
-  <div class="card"><h3>TryHackMe CTF</h3><p>Enumeration, login cracking, and local privilege escalation.</p></div>
-  <div class="card"><h3>CyberShujaa Network Lab</h3><p>Wireshark, iptables, and Fail2Ban to monitor and defend.</p></div>
+  <div class="card">
+    <h3>TryHackMe: Simple CTF</h3>
+    <p>Web enumeration, SSH cracking, and privilege escalation using tools like Gobuster, Hydra, and LinPEAS.</p>
+  </div>
+  <div class="card">
+    <h3>CyberShujaa Lab: Network Defense</h3>
+    <p>Wireshark, iptables, and Fail2Ban to detect and block brute-force attacks on Linux systems.</p>
+  </div>
 </section>
 
 <section id="resume" class="reveal">
   <h2>📄 Resume</h2>
   <ul>
-    <li><strong>Education:</strong> BSc Mathematics & Computer Science – Kenyatta University (July 2024)</li>
+    <li><strong>Education:</strong> BSc in Mathematics & Computer Science – Kenyatta University (July 2024)</li>
     <li><strong>Experience:</strong> Data Analyst (Freelancer), UN Volunteer</li>
     <li><strong>Certifications:</strong> CyberShujaa, TryHackMe Badges</li>
     <li><strong>Skills:</strong> Python, SQL, Azure, SIEM, Kali Linux, Power BI</li>
