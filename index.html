@@ -18,7 +18,7 @@
     <a href="#labs">Labs</a>
     <a href="#resume">Resume</a>
     <a href="#contact">Contact</a>
-    <button class="toggle-darkmode" onclick="document.body.classList.toggle('dark-mode')">🌓</button>
+   <button id="mode-toggle" class="toggle-darkmode">🌙</button>
   </nav>
 </header>
 
@@ -151,20 +151,22 @@
     interval: 200
   });
 </script>
-
 <script>
-  function toggleTheme() {
-    const currentTheme = document.documentElement.getAttribute("data-theme");
-    const newTheme = currentTheme === "dark" ? "light" : "dark";
-    document.documentElement.setAttribute("data-theme", newTheme);
-    localStorage.setItem("theme", newTheme);
+  const toggle = document.getElementById('mode-toggle');
+
+  // Optionally use system preference
+  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  if (prefersDark) {
+    document.body.classList.add('dark-mode');
+    toggle.textContent = '🌞';
   }
 
-  // Load saved theme
-  document.addEventListener("DOMContentLoaded", () => {
-    const savedTheme = localStorage.getItem("theme") || "light";
-    document.documentElement.setAttribute("data-theme", savedTheme);
+  toggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    toggle.textContent = document.body.classList.contains('dark-mode') ? '🌞' : '🌙';
   });
 </script>
+
 </body>
 </html>
