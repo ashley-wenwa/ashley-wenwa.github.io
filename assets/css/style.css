@@ -1,29 +1,52 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #222222;
+  --header-bg: #0e1a40;
+  --card-bg: #ffffff;
+  --link-color: #0077cc;
+  --accent-color: #005fa3;
+}
+
+body.dark-mode {
+  --bg-color: #1e1e1e;
+  --text-color: #eeeeee;
+  --header-bg: #121212;
+  --card-bg: #2a2a2a;
+  --link-color: #4dabf7;
+  --accent-color: #82cfff;
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
-  background: #f5f8fa;
-  color: #333;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   scroll-behavior: smooth;
+  transition: background-color 0.3s, color 0.3s;
 }
+
+/* Header */
 header {
-  background: #0e1a40;
+  background-color: var(--header-bg);
   color: white;
   padding: 20px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
+
 nav a {
   margin: 0 10px;
-  color: #fff;
+  color: white;
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.3s ease;
 }
 nav a:hover {
-  text-decoration: underline;
+  color: var(--accent-color);
 }
 .toggle-darkmode {
   background: transparent;
@@ -33,104 +56,62 @@ nav a:hover {
   border-radius: 8px;
   cursor: pointer;
 }
+
+/* Layout */
 section {
   max-width: 960px;
   margin: 60px auto;
   padding: 20px;
 }
-.card {
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  padding: 20px;
-  margin-bottom: 20px;
-}
 footer {
-  background: #0e1a40;
+  background-color: var(--header-bg);
   color: white;
   text-align: center;
-  padding: 15px;
+  padding: 20px;
+  margin-top: 40px;
 }
-.cv-button {
-  display: inline-block;
-  padding: 12px 24px;
-  background: #0e1a40;
-  color: white;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-}
-.input-style {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  margin-top: 6px;
-  border-radius: 6px;
-  transition: border-color 0.3s ease;
-}
-.input-style:focus {
-  border-color: #0e1a40;
-  outline: none;
-}
+
+/* Buttons */
+.cv-button,
 .btn-submit {
-  background-color: #0e1a40;
+  background-color: var(--header-bg);
   color: white;
   border: none;
   padding: 12px 24px;
   border-radius: 6px;
-  font-size: 1em;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
 }
+.cv-button:hover,
 .btn-submit:hover {
-  background-color: #1a2a60;
-}
-body.dark-mode {
-  background: #1e1e1e;
-  color: #eee;
-}
-body.dark-mode header,
-body.dark-mode footer {
-  background: #121212;
-}
-body.dark-mode .card {
-  background: #2a2a2a;
-  color: #f5f5f5;
-}
-.projects-section {
-  padding: 30px;
-  max-width: 1000px;
-  margin: 0 auto;
+  background-color: var(--accent-color);
+  transform: scale(1.05);
 }
 
-.project-card {
-  background-color: var(--header-bg);
-  padding: 20px;
-  margin: 20px 0;
+/* Cards */
+.card, .project-card {
+  background-color: var(--card-bg);
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover, .project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
 }
 
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-.project-card h3 {
-  margin-top: 0;
+/* Links */
+a {
   color: var(--link-color);
 }
-
-.project-card a {
-  color: var(--link-color);
-  font-weight: bold;
-  text-decoration: none;
+a:hover {
+  color: var(--accent-color);
 }
 
-.project-card a:hover {
-  text-decoration: underline;
-}
+/* Profile Photo */
 .profile-photo {
   display: flex;
   justify-content: center;
@@ -141,7 +122,7 @@ body.dark-mode .card {
   height: 180px;
   object-fit: cover;
   border-radius: 50%;
-  border: 4px solid #0e1a40;
+  border: 4px solid var(--header-bg);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
@@ -149,257 +130,65 @@ body.dark-mode .card {
   transform: scale(1.05) rotate(1deg);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
 }
-:root {
-  --bg-color: #ffffff;
-  --text-color: #222222;
-  --header-bg: #f4f4f4;
-  --card-bg: #ffffff;
-  --link-color: #0077cc;
-  --accent-color: #005fa3;
-}
 
-[data-theme="dark"] {
-  --bg-color: #121212;
-  --text-color: #e0e0e0;
-  --header-bg: #1e1e1e;
-  --card-bg: #1c1c1c;
-  --link-color: #4dabf7;
-  --accent-color: #82cfff;
+/* Contact Form */
+.input-style {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
 }
-
-body {
-  margin: 0;
-  font-family: "Segoe UI", sans-serif;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  transition: background-color 0.3s, color 0.3s;
+.input-style:focus {
+  border-color: var(--link-color);
+  box-shadow: 0 0 6px rgba(0, 119, 204, 0.4);
+  outline: none;
 }
-
-header {
-  background-color: var(--header-bg);
+.form-group {
+  margin-bottom: 16px;
+}
+.contact-form {
+  background: var(--card-bg);
   padding: 20px;
-  text-align: center;
-  border-bottom: 1px solid #ddd;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 2.2em;
-}
-
-header p {
-  font-size: 1.1em;
-  margin-top: 5px;
-}
-
-nav {
-  margin-top: 15px;
-}
-
-nav a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: var(--link-color);
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-nav a:hover {
-  color: var(--accent-color);
-}
-
-section {
-  max-width: 1000px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: var(--header-bg);
-  margin-top: 50px;
-}
-
-.project-card {
-  background-color: var(--card-bg);
-  padding: 20px;
-  margin: 20px 0;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  transition: background-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.project-card:hover {
-  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-}
-
-.project-card h3 {
-  margin-top: 0;
-  color: var(--link-color);
-}
-
-.project-card a {
-  color: var(--link-color);
-  font-weight: 500;
-  text-decoration: none;
-}
-
-.project-card a:hover {
-  text-decoration: underline;
-}
-
-.toggle-button {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  background: none;
-  border: 2px solid var(--link-color);
-  padding: 8px 12px;
-  font-weight: bold;
-  border-radius: 8px;
-  color: var(--link-color);
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.toggle-button:hover {
-  background-color: var(--link-color);
-  color: #fff;
-}
+/* Contact Links */
 .contact-links {
   text-align: center;
   margin-top: 20px;
   font-size: 1.05em;
 }
-
 .contact-links a {
   display: inline-block;
-  margin: 8px 0;
+  margin: 10px 0;
   color: inherit;
   text-decoration: none;
   transition: transform 0.3s ease, color 0.3s ease;
 }
-
 .contact-links a i {
   margin-right: 8px;
   transition: transform 0.3s ease, color 0.3s ease;
 }
-
 .contact-links a:hover {
-  color: #0e1a40;
+  color: var(--header-bg);
   transform: scale(1.05);
 }
-
 .contact-links a:hover i {
-  color: #0e1a40;
   transform: rotate(-8deg) scale(1.2);
+  color: var(--header-bg);
 }
-<section id="contact" class="reveal contact-section">
-  <h2>📬 Contact Me</h2>
 
-  <form name="contact" method="POST" data-netlify="true" class="contact-form">
-    <div class="form-group">
-      <label>Name:<br><input type="text" name="name" required class="input-style"></label>
-    </div>
-    <div class="form-group">
-      <label>Email:<br><input type="email" name="email" required class="input-style"></label>
-    </div>
-    <div class="form-group">
-      <label>Message:<br><textarea name="message" rows="5" required class="input-style"></textarea></label>
-    </div>
-    <div style="text-align:center;">
-      <button type="submit" class="btn-submit">Send Message</button>
-    </div>
-  </form>
-
-  <div class="contact-links">
-    <a href="mailto:wenwaashley@gmail.com" target="_blank">
-      <i class="fas fa-envelope"></i> wenwaashley@gmail.com
-    </a><br>
-
-    <a href="https://github.com/WENWA444" target="_blank">
-      <i class="fab fa-github"></i> github.com/WENWA444
-    </a><br>
-
-    <a href="https://linkedin.com/in/ashley-wenwa" target="_blank">
-      <i class="fab fa-linkedin"></i> linkedin.com/in/ashley-wenwa
-    </a><br>
-
-    <a href="tel:+254787998416">
-      <i class="fas fa-phone"></i> +254 787 998 416
-    </a>
-  </div>
-</section>
-<section id="contact" class="reveal contact-section">
-  <h2>📬 Contact Me</h2>
-
-  <form name="contact" method="POST" data-netlify="true" class="contact-form">
-    <div class="form-group">
-      <label>Name:<br><input type="text" name="name" required class="input-style"></label>
-    </div>
-    <div class="form-group">
-      <label>Email:<br><input type="email" name="email" required class="input-style"></label>
-    </div>
-    <div class="form-group">
-      <label>Message:<br><textarea name="message" rows="5" required class="input-style"></textarea></label>
-    </div>
-    <div style="text-align:center;">
-      <button type="submit" class="btn-submit">Send Message</button>
-    </div>
-  </form>
-
-  <div class="contact-links">
-    <a href="mailto:wenwaashley@gmail.com" target="_blank">
-      <i class="fas fa-envelope"></i> wenwaashley@gmail.com
-    </a><br>
-
-    <a href="https://github.com/WENWA444" target="_blank">
-      <i class="fab fa-github"></i> github.com/WENWA444
-    </a><br>
-
-    <a href="https://linkedin.com/in/ashley-wenwa" target="_blank">
-      <i class="fab fa-linkedin"></i> linkedin.com/in/ashley-wenwa
-    </a><br>
-
-    <a href="tel:+254787998416">
-      <i class="fas fa-phone"></i> +254 787 998 416
-    </a>
-  </div>
-</section>
-<section id="contact" class="reveal contact-section">
-  <h2>📬 Contact Me</h2>
-
-  <form name="contact" method="POST" data-netlify="true" class="contact-form">
-    <div class="form-group">
-      <label>Name:<br><input type="text" name="name" required class="input-style"></label>
-    </div>
-    <div class="form-group">
-      <label>Email:<br><input type="email" name="email" required class="input-style"></label>
-    </div>
-    <div class="form-group">
-      <label>Message:<br><textarea name="message" rows="5" required class="input-style"></textarea></label>
-    </div>
-    <div style="text-align:center;">
-      <button type="submit" class="btn-submit">Send Message</button>
-    </div>
-  </form>
-
-  <div class="contact-links">
-    <a href="mailto:wenwaashley@gmail.com" target="_blank">
-      <i class="fas fa-envelope"></i> wenwaashley@gmail.com
-    </a><br>
-
-    <a href="https://github.com/WENWA444" target="_blank">
-      <i class="fab fa-github"></i> github.com/WENWA444
-    </a><br>
-
-    <a href="https://linkedin.com/in/ashley-wenwa" target="_blank">
-      <i class="fab fa-linkedin"></i> linkedin.com/in/ashley-wenwa
-    </a><br>
-
-    <a href="tel:+254787998416">
-      <i class="fas fa-phone"></i> +254 787 998 416
-    </a>
-  </div>
-</section>
+/* Scroll Reveal Animation */
+.reveal {
+  opacity: 0;
+}
+.reveal.visible {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
