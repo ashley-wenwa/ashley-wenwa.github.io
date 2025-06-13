@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <title>Ashley Wenwa | Cybersecurity Portfolio</title>
@@ -10,6 +10,7 @@
 <body class="light-mode">
 
 <header>
+  <button class="toggle-button" onclick="toggleTheme()">Toggle Dark Mode</button>
   <div><strong>Ashley Wenwa</strong></div>
   <nav>
     <a href="#about">About</a>
@@ -132,6 +133,21 @@
     easing: 'ease-in-out',
     origin: 'bottom',
     interval: 200
+  });
+</script>
+
+<script>
+  function toggleTheme() {
+    const currentTheme = document.documentElement.getAttribute("data-theme");
+    const newTheme = currentTheme === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", newTheme);
+    localStorage.setItem("theme", newTheme);
+  }
+
+  // Load saved theme
+  document.addEventListener("DOMContentLoaded", () => {
+    const savedTheme = localStorage.getItem("theme") || "light";
+    document.documentElement.setAttribute("data-theme", savedTheme);
   });
 </script>
 
