@@ -1,6 +1,6 @@
+
 <!DOCTYPE html>
-<html lang="en" 
-  
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Ashley Wenwa | Cybersecurity Portfolio</title>
@@ -18,9 +18,11 @@
     <a href="#labs">Labs</a>
     <a href="#resume">Resume</a>
     <a href="#contact">Contact</a>
-   <button id="mode-toggle" class="toggle-darkmode">🌙</button>
+    <button id="mode-toggle" class="toggle-darkmode">🌙</button>
   </nav>
 </header>
+
+<div id="typing-text" class="typing"></div>
 
 <div class="profile-photo reveal">
   <img src="assets/img/profile.jpg" alt="Ashley Wenwa" class="animated-photo">
@@ -29,7 +31,7 @@
 <section id="about" class="reveal">
   <h2>About Me</h2>
   <p>
-   Hello👋, I'm Ashley Wenwa, a cybersecurity enthusiast with a background in Mathematics and Computer Science. I specialize in cloud security, SIEM tools and threat detection, with a growing focus on offensive security and hands-on lab work.
+    Hello👋, I'm Ashley Wenwa, a cybersecurity enthusiast with a background in Mathematics and Computer Science. I specialize in cloud security, SIEM tools and threat detection, with a growing focus on offensive security and hands-on lab work.
   </p>
   <p>
     Through my training and my personal projects, I’ve developed strong skills in using platforms like Azure, Kali Linux and Python for securing systems and analyzing threats. I'm passionate about solving real-world cybersecurity problems and building secure, data-driven solutions.
@@ -38,7 +40,6 @@
     I thrive in collaborative environments, communicate well and enjoy sharing knowledge — whether through public speaking or mentoring others. I'm currently seeking opportunities where I can apply my skills, grow as a professional and contribute meaningfully to a security-first organization.
   </p>
 </section>
-
 
 <section id="projects" class="reveal">
   <h2>💻 Projects</h2>
@@ -120,27 +121,18 @@
   </form>
 
   <div class="contact-links">
-    <a href="mailto:wenwaashley@gmail.com" target="_blank">
-      <i class="fas fa-envelope"></i> wenwaashley@gmail.com
-    </a><br>
-
-    <a href="https://github.com/WENWA444" target="_blank">
-      <i class="fab fa-github"></i> github.com/ashley-wenwa
-    </a><br>
-
-    <a href="https://linkedin.com/in/ashley-wenwa" target="_blank">
-      <i class="fab fa-linkedin"></i> linkedin.com/in/ashley-wenwa
-    </a><br>
-
-    <a href="tel:+254787998416">
-      <i class="fas fa-phone"></i> +254 787 998 416
-    </a>
+    <a href="mailto:wenwaashley@gmail.com" target="_blank"><i class="fas fa-envelope"></i> wenwaashley@gmail.com</a><br>
+    <a href="https://github.com/WENWA444" target="_blank"><i class="fab fa-github"></i> github.com/WENWA444</a><br>
+    <a href="https://linkedin.com/in/ashley-wenwa" target="_blank"><i class="fab fa-linkedin"></i> linkedin.com/in/ashley-wenwa</a><br>
+    <a href="tel:+254787998416"><i class="fas fa-phone"></i> +254 787 998 416</a>
   </div>
 </section>
 
 <footer>
   &copy; 2025 Ashley Wenwa | Built with 💻 & ☕
 </footer>
+
+<button onclick="scrollToTop()" id="topBtn" title="Go to top">↑</button>
 
 <script>
   ScrollReveal().reveal('.reveal', {
@@ -150,22 +142,58 @@
     origin: 'bottom',
     interval: 200
   });
-</script>
-<script>
+
   const toggle = document.getElementById('mode-toggle');
-
-  // Optionally use system preference
   const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-
   if (prefersDark) {
     document.body.classList.add('dark-mode');
     toggle.textContent = '🌞';
   }
-
   toggle.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
     toggle.textContent = document.body.classList.contains('dark-mode') ? '🌞' : '🌙';
   });
+
+  const typingElement = document.getElementById('typing-text');
+  const phrases = [
+    'Cybersecurity Enthusiast',
+    'Cloud Security Specialist',
+    'Threat Detection & SIEM',
+    'Python & Offensive Security'
+  ];
+  let phraseIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  function type() {
+    const currentPhrase = phrases[phraseIndex];
+    const displayText = currentPhrase.substring(0, charIndex);
+    typingElement.textContent = displayText;
+
+    if (!isDeleting && charIndex < currentPhrase.length) {
+      charIndex++;
+    } else if (isDeleting && charIndex > 0) {
+      charIndex--;
+    } else if (!isDeleting && charIndex === currentPhrase.length) {
+      isDeleting = true;
+      setTimeout(type, 1000);
+      return;
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      phraseIndex = (phraseIndex + 1) % phrases.length;
+    }
+
+    setTimeout(type, isDeleting ? 50 : 120);
+  }
+  type();
+
+  const topBtn = document.getElementById('topBtn');
+  window.onscroll = function () {
+    topBtn.style.display = window.scrollY > 200 ? 'block' : 'none';
+  };
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 </script>
 
 </body>
