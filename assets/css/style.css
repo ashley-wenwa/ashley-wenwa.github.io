@@ -149,3 +149,121 @@ body.dark-mode .card {
   transform: scale(1.05) rotate(1deg);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
 }
+:root {
+  --bg-color: #ffffff;
+  --text-color: #222222;
+  --header-bg: #f4f4f4;
+  --card-bg: #ffffff;
+  --link-color: #0077cc;
+  --accent-color: #005fa3;
+}
+
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --header-bg: #1e1e1e;
+  --card-bg: #1c1c1c;
+  --link-color: #4dabf7;
+  --accent-color: #82cfff;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+  background-color: var(--header-bg);
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.2em;
+}
+
+header p {
+  font-size: 1.1em;
+  margin-top: 5px;
+}
+
+nav {
+  margin-top: 15px;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: var(--link-color);
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--accent-color);
+}
+
+section {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--header-bg);
+  margin-top: 50px;
+}
+
+.project-card {
+  background-color: var(--card-bg);
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.project-card h3 {
+  margin-top: 0;
+  color: var(--link-color);
+}
+
+.project-card a {
+  color: var(--link-color);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  background: none;
+  border: 2px solid var(--link-color);
+  padding: 8px 12px;
+  font-weight: bold;
+  border-radius: 8px;
+  color: var(--link-color);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.toggle-button:hover {
+  background-color: var(--link-color);
+  color: #fff;
+}
