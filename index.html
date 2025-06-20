@@ -1,12 +1,12 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Ashley Wenwa | Portfolio</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   <script src="https://unpkg.com/scrollreveal"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
@@ -14,6 +14,8 @@
   <div><strong>Ashley Wenwa</strong></div>
   <nav>
     <a href="#about">About</a>
+    <a href="#soft-skills">Soft Skills</a>
+    <a href="#skills">Tech Stack</a>
     <a href="#projects">Projects</a>
     <a href="#labs">Labs</a>
     <a href="#resume">Resume</a>
@@ -25,8 +27,9 @@
 <div id="typing-text" class="typing"></div>
 
 <div class="profile-photo reveal">
-  <img src="assets/img/profile.jpg" alt="Ashley Wenwa" class="animated-photo">
+  <img src="assets/img/profile.jpg" alt="Ashley Wenwa" class="animated-photo" />
 </div>
+
 <section id="about" class="reveal">
   <h2>About Me</h2>
   <p>
@@ -38,7 +41,8 @@
   <p>
     I thrive in collaborative environments, communicate well and enjoy sharing knowledge — whether through public speaking or mentoring others. I'm currently seeking opportunities where I can apply my skills, grow as a professional and contribute meaningfully to a security-first organization.
   </p>
-</section> 
+</section>
+
 <section id="soft-skills" class="reveal">
   <h2>🧠 Soft Skills</h2>
   <ul class="soft-skills-list">
@@ -51,45 +55,42 @@
     <li class="reveal-soft">⏱ Time Management</li>
   </ul>
 </section>
-  <section id="skills" class="reveal">
+
+<section id="skills" class="reveal">
   <h2>⚙️ My Tech Stack</h2>
   <div class="tech-icons">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" title="HTML5" class="tech-img">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" title="CSS3" class="tech-img">
-    <img src="assets/img/python.svg"alt="Python"title="Python" class="tech-img">
-    <img src="assets/img/azure.svg" alt="Azure"title="Azure" class="tech-img">
-    <img src="assets/img/mysql.svg" alt="MySQL"title="MySQL" class="tech-img">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" title="HTML5" class="tech-img" />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" title="CSS3" class="tech-img" />
+    <img src="assets/img/python.svg" alt="Python" title="Python" class="tech-img" />
+    <img src="assets/img/azure.svg" alt="Azure" title="Azure" class="tech-img" />
+    <img src="assets/img/mysql.svg" alt="MySQL" title="MySQL" class="tech-img" />
     <i class="fab fa-github" title="GitHub"></i>
-    <img src="assets/img/sql.svg" alt="SQL" title="SQL" class="tech-img">
-    <img src="assets/img/excel.png" alt="Microsoft Excel" title="Excel" class="tech-img">
-    <img src="assets/img/notion.svg" alt="Notion" title="Notion" class="tech-img">
-    <img src="assets/img/linux.svg" alt="Linux" title="Linux" class="tech-img"> 
-    <img src="assets/img/kali.svg" alt="Kali Linux" title="Kali Linux" class="tech-img">
-    <img src="assets/img/powerbi.svg" alt="Power BI" title="Power BI" class="tech-img">
+    <img src="assets/img/sql.svg" alt="SQL" title="SQL" class="tech-img" />
+    <img src="assets/img/excel.png" alt="Microsoft Excel" title="Excel" class="tech-img" />
+    <img src="assets/img/notion.svg" alt="Notion" title="Notion" class="tech-img" />
+    <img src="assets/img/linux.svg" alt="Linux" title="Linux" class="tech-img" />
+    <img src="assets/img/kali.svg" alt="Kali Linux" title="Kali Linux" class="tech-img" />
+    <img src="assets/img/powerbi.svg" alt="Power BI" title="Power BI" class="tech-img" />
   </div>
 </section>
+
 <section id="projects" class="reveal">
   <h2>💻 Projects</h2>
-  <p>Here are some of the cybersecurity and cloud-related projects I've worked on:</p>
-
   <div class="project-card">
     <h3>Home Network Security Hardening</h3>
     <p>Secured my home network with router configuration, firewall rules, and device isolation. Included a vulnerability scan to identify common risks.</p>
     <p><strong>Tools:</strong> Nmap, Nessus, Wireshark, Router UI</p>
   </div>
-
   <div class="project-card">
     <h3>Wazuh SIEM Deployment</h3>
     <p>Deployed Wazuh on a virtual lab environment and configured it to detect brute-force attacks, suspicious logins, and malware events.</p>
     <p><strong>Tools:</strong> Wazuh, ELK Stack, VirtualBox</p>
   </div>
-
   <div class="project-card">
     <h3>Custom Mini SIEM in Python</h3>
     <p>Created a basic log monitoring and alerting system in Python, simulating core SIEM features like log parsing and anomaly detection.</p>
     <p><strong>Tools:</strong> Python, Regex, JSON</p>
   </div>
-
   <div class="project-card">
     <h3>Malware Analysis Lab</h3>
     <p>Used a sandboxed environment to analyze malware behavior, identify indicators of compromise, and document persistence methods.</p>
@@ -99,12 +100,10 @@
 
 <section id="labs" class="reveal">
   <h2>🧪 Labs & CTFs</h2>
-
   <div class="card">
     <h3>TryHackMe: Simple CTF</h3>
     <p>Performed enumeration, brute-forced SSH credentials, and escalated privileges using LinPEAS.</p>
   </div>
-
   <div class="card">
     <h3>CyberShujaa Network Defense Lab</h3>
     <p>Detected brute-force attacks using Wireshark, blocked them with Fail2Ban and iptables.</p>
@@ -131,7 +130,6 @@
 
 <section id="contact" class="reveal contact-section">
   <h2>📬 Contact Me</h2>
-
   <form name="contact" method="POST" data-netlify="true" class="contact-form">
     <div class="form-group">
       <label>Name:<br><input type="text" name="name" required class="input-style"></label>
@@ -146,11 +144,10 @@
       <button type="submit" class="btn-submit">Send Message</button>
     </div>
   </form>
-
   <div class="contact-links">
-    <a href="mailto:wenwaashley@gmail.com" target="_blank"><i class="fas fa-envelope"></i> wenwaashley@gmail.com</a><br>
-    <a href="https://github.com/ashley-wenwa" target="_blank"><i class="fab fa-github"></i> github.com/ashley-wenwa</a><br>
-    <a href="https://linkedin.com/in/ashley-wenwa" target="_blank"><i class="fab fa-linkedin"></i> linkedin.com/in/ashley-wenwa</a><br>
+    <a href="mailto:wenwaashley@gmail.com" target="_blank"><i class="fas fa-envelope"></i> wenwaashley@gmail.com</a><br />
+    <a href="https://github.com/ashley-wenwa" target="_blank"><i class="fab fa-github"></i> github.com/ashley-wenwa</a><br />
+    <a href="https://linkedin.com/in/ashley-wenwa" target="_blank"><i class="fab fa-linkedin"></i> linkedin.com/in/ashley-wenwa</a><br />
     <a href="tel:+254787998416"><i class="fas fa-phone"></i> +254 787 998 416</a>
   </div>
 </section>
@@ -169,13 +166,14 @@
     origin: 'bottom',
     interval: 200
   });
-ScrollReveal().reveal('.reveal-soft', {
-  distance: '20px',
-  duration: 800,
-  easing: 'ease-in-out',
-  origin: 'bottom',
-  interval: 150
-});
+  ScrollReveal().reveal('.reveal-soft', {
+    distance: '20px',
+    duration: 800,
+    easing: 'ease-in-out',
+    origin: 'bottom',
+    interval: 150
+  });
+
   const toggle = document.getElementById('mode-toggle');
   const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
   if (prefersDark) {
@@ -227,19 +225,6 @@ ScrollReveal().reveal('.reveal-soft', {
   function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
-</script>
-<script src="https://unpkg.com/scrollreveal"></script>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    ScrollReveal().reveal(".reveal", {
-      distance: "40px",
-      duration: 1000,
-      easing: "ease-in-out",
-      origin: "bottom",
-      interval: 200,
-      reset: false
-    });
-  });
 </script>
 
 </body>
