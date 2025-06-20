@@ -125,11 +125,10 @@ footer {
 }
 
 /* Grid layout for project/lab/resume cards */
-.projects-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  align-items: center;
+.projects-grid,
+.resume-grid,
+.labs-grid {
+  display: block;
   margin-top: 30px;
 }
 
@@ -138,16 +137,17 @@ footer {
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  max-width: 600px;
+  margin-bottom: 24px;
   width: 100%;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
+
 
 /* Resume buttons */
 .resume-actions .btn {
@@ -269,14 +269,3 @@ ul li {
   gap: 20px;
   margin-top: 20px;
 }
-.projects-grid,
-.resume-grid,
-.labs-grid {
-  display: block;
-  margin-top: 30px;
-}
-
-.project-card {
-  background-color: var(--card-bg);
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,
