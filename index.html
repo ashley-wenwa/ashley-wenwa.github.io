@@ -157,23 +157,27 @@
 </footer>
 
 <button onclick="scrollToTop()" id="topBtn" title="Go to top">↑</button>
-
+  
 <script>
-  ScrollReveal().reveal('.reveal', {
-    distance: '40px',
-    duration: 1000,
-    easing: 'ease-in-out',
-    origin: 'bottom',
-    interval: 200
-  });
-  ScrollReveal().reveal('.reveal-soft', {
-    distance: '20px',
-    duration: 800,
-    easing: 'ease-in-out',
-    origin: 'bottom',
-    interval: 150
-  });
+  document.addEventListener("DOMContentLoaded", function () {
+    ScrollReveal().reveal('.reveal', {
+      distance: '40px',
+      duration: 1000,
+      easing: 'ease-in-out',
+      origin: 'bottom',
+      interval: 200
+    });
 
+    ScrollReveal().reveal('.reveal-soft', {
+      distance: '20px',
+      duration: 800,
+      easing: 'ease-in-out',
+      origin: 'bottom',
+      interval: 150
+    });
+  });
+</script>
+  
   const toggle = document.getElementById('mode-toggle');
   const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
   if (prefersDark) {
