@@ -169,7 +169,13 @@
     origin: 'bottom',
     interval: 200
   });
-
+ScrollReveal().reveal('.reveal-soft', {
+  distance: '20px',
+  duration: 800,
+  easing: 'ease-in-out',
+  origin: 'bottom',
+  interval: 150
+});
   const toggle = document.getElementById('mode-toggle');
   const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
   if (prefersDark) {
