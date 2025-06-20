@@ -280,3 +280,7 @@ a:hover {
   padding-left: 0; /* Remove space that was there for the checkmark */
   margin-bottom: 0.8em;
 }
+.reveal-soft {
+  opacity: 1 !important;
+  transform: none !important;
+}
