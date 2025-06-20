@@ -276,7 +276,17 @@ a:hover {
   opacity: 1;
   transform: translateY(0);
 }
-.soft-skills-list li {
-  padding-left: 0; /* Remove space that was there for the checkmark */
-  margin-bottom: 0.8em;
+.soft-skills-list {
+  list-style: none;
+  padding-left: 0;
+  font-size: 1.1em;
+  line-height: 1.8;
+  color: var(--text-color);
+  margin-top: 20px;
 }
+
+.soft-skills-list li {
+  margin-bottom: 0.6em;
+  font-weight: 500;
+}
+
