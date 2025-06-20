@@ -340,9 +340,15 @@ footer {
   line-height: 1.6;
 }
 .project-card {
-  max-width: 400px;
   width: 100%;
+  min-width: 280px;
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 #resume ul {
   list-style-type: disc;
   padding-left: 20px;
@@ -361,4 +367,9 @@ footer {
   gap: 24px;
   justify-content: center;
   margin-top: 30px;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
