@@ -254,4 +254,8 @@ html {
   color: var(--accent-color);
   font-weight: bold;
 }
+#soft-skills {
+  background-color: pink;
+  border: 2px dashed red;
+}
 
