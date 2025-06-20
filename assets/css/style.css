@@ -331,3 +331,9 @@ body.dark-mode .soft-skills .card {
   background-color: #1e1e1e;
   color: #f1f1f1;
 }
+.tech-logo {
+  width: 40px;
+  height: 40px;
+  fill: currentColor;
+  filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.1));
+}
