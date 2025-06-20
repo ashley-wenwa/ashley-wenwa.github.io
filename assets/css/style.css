@@ -272,7 +272,7 @@ footer {
 }
 #resume {
   padding: 60px 20px;
-  background: #f9f9f9;
+  background: var(--bg-color);
   text-align: center;
 }
 
