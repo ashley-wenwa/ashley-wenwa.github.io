@@ -20,7 +20,7 @@
       <a href="#resume">Resume</a>
       <a href="#contact">Contact</a>
     </nav>
-    <button class="toggle-darkmode" onclick="toggleDarkMode()">🌓</button>
+   <button id="dark-mode-toggle">🌙 Toggle Dark Mode</button> 
   </header>
 
   <section id="hero" class="section">
@@ -43,23 +43,19 @@
     </div>
   </section>
 
-  <section id="soft-skills" class="section">
-    <div class="container">
-      <h2 class="section-title sr-fade-down">💡 Soft Skills</h2>
-      <ul class="soft-skills-list sr-fade-up">
-        <li>🤝 Team Collaboration</li>
-        <li>🎯 Attention to Detail</li>
-        <li>🗣️ Communication</li>
-        <li>⏱️ Time Management</li>
-        <li>🧠 Problem Solving</li>
-        <li>⚖️ Accountability</li>
-        <li>🔁 Adaptability</li>
-        <li>🧘 Conflict Resolution</li>
-        <li>🚀 Initiative</li>
-        <li>🔍 Critical Thinking</li>
-      </ul>
-    </div>
-  </section>
+  <section class="soft-skills" id="soft-skills">
+  <h2 class="section-title">💡 Soft Skills</h2>
+
+  <div class="card"><h3 class="project-title">🤝 Teamwork and Collaboration</h3></div>
+  <div class="card"><h3 class="project-title">🧠 Problem-Solving</h3></div>
+  <div class="card"><h3 class="project-title">🔍 Attention to Detail</h3></div>
+  <div class="card"><h3 class="project-title">⚖️ Adaptability</h3></div>
+  <div class="card"><h3 class="project-title">🔒 Integrity</h3></div>
+  <div class="card"><h3 class="project-title">👑 Leadership Potential</h3></div>
+  <div class="card"><h3 class="project-title">⏳ Time Management</h3></div>
+  <div class="card"><h3 class="project-title">🧩 Critical Thinking</h3></div>
+  <div class="card"><h3 class="project-title">🔥 Self-Driven</h3></div>
+</section>
 
   <section id="skills" class="section">
     <div class="container">
@@ -77,65 +73,94 @@
         <img src="assets/img/linux.svg" alt="Linux CLI" class="tech-img" title="Linux CLI" />
         <img src="assets/img/html5.svg" alt="HTML5" class="tech-img" title="HTML5/CSS3" />
         <img src="assets/img/excel.svg" alt="Excel" class="tech-img" title="Microsoft Excel" />
+        <img src="assets/img/notion.svg" alt="Notion" class="tech-img" title="Notion" />
+       <img src="assets/img/css3.svg" alt="CSS3" class="tech-img" title="CSS3" /> 
       </div>
     </div>
   </section>
 
-  <section id="projects" class="section">
-    <div class="container">
-      <h2 class="section-title sr-fade-down">🚀 Projects</h2>
-      <div class="projects-grid">
-        <div class="project-card sr-fade-up">
-          <h3>🔐 Home Network Security Hardening</h3>
-          <ul>
-            <li>Evaluated router settings and disabled insecure protocols like WPS and UPnP.</li>
-            <li>Implemented firewall rules, port blocking, and MAC address filtering.</li>
-            <li>Scanned connected devices with Nmap to identify vulnerabilities.</li>
-            <li>Documented steps and results for GitHub showcasing.</li>
-          </ul>
-        </div>
-        <div class="project-card sr-fade-up">
-          <h3>📊 Wazuh SIEM Deployment</h3>
-          <ul>
-            <li>Deployed and configured Wazuh manager, agent, and dashboard.</li>
-            <li>Monitored endpoint logs, tuned rules, and created alerts for real-time detection.</li>
-            <li>Simulated brute-force attacks and documented incident response workflow.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
+<section class="projects" id="projects">
+  <h2 class="section-title">💼 Projects</h2>
 
-  <section id="labs" class="section">
-    <div class="container">
-      <h2 class="section-title sr-fade-down">🔬 Labs</h2>
-      <div class="projects-grid">
-        <div class="project-card sr-fade-up">
-          <h3>🧪 TryHackMe: Pre-Security Path</h3>
-          <ul>
-            <li>Completed modules in Linux, Networking, Cybersecurity Essentials, and Web Hacking.</li>
-            <li>Practiced system permissions, command-line enumeration, and network scanning.</li>
-            <li>Achieved badges and documented learning process.</li>
-          </ul>
-        </div>
-        <div class="project-card sr-fade-up">
-          <h3>🦠 Malware Analysis Lab</h3>
-          <ul>
-            <li>Set up isolated malware lab with Windows Sandbox and VMware.</li>
-            <li>Analyzed malware with Procmon, Wireshark, Autoruns, and Process Explorer.</li>
-            <li>Used Ghidra for static analysis and documented indicators of compromise (IOCs).</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
+  <div class="card">
+    <h3 class="project-title">🔐 Wazuh SIEM Deployment & Threat Detection Lab</h3>
+    <p><strong>Tech Used:</strong> Wazuh, Kibana, Elastic Stack, VirtualBox, Ubuntu, Windows Server</p>
+    <p>Designed and deployed a full-featured Security Information and Event Management (SIEM) lab using Wazuh. Integrated Wazuh agents with both Linux and Windows endpoints to monitor logs, detect suspicious behavior, and generate security alerts in real-time. Built dashboards in Kibana for visibility into host activity, login attempts, and potential threats.</p>
+    <p><strong>Impact:</strong> Demonstrated ability to manage enterprise-level logging and intrusion detection, aligning with SOC workflows and incident response strategies.</p>
+  </div>
 
+  <div class="card">
+    <h3 class="project-title">🛡️ Home Network Security Hardening Project</h3>
+    <p><strong>Tech Used:</strong> Nmap, UFW, Fail2Ban, Wireshark, Router Configuration, Kali Linux</p>
+    <p>Performed a comprehensive security assessment of my home network. Identified vulnerable open ports and services using Nmap, implemented firewall rules via UFW, and set up Fail2Ban to mitigate brute force attacks. Documented Wireshark captures to monitor packet flow and detect anomalies. Hardened router configurations, disabled unused services, and enforced WPA2 encryption.</p>
+    <p><strong>Impact:</strong> Demonstrated hands-on security auditing, practical defense-in-depth techniques, and real-world mitigation of home network threats.</p>
+  </div>
+
+  <div class="card">
+    <h3 class="project-title">🧬 Python Mini SIEM – Log Analysis & Alerting Tool</h3>
+    <p><strong>Tech Used:</strong> Python, Regex, JSON, Log Parsing, Tkinter (for GUI), Crontab</p>
+    <p>Developed a lightweight SIEM-inspired log analyzer in Python to simulate key SIEM functions. Parsed local syslogs and application logs to detect defined threat signatures such as failed SSH logins or unexpected port scans. The tool generated JSON-formatted alerts and a basic visual dashboard using Tkinter. Integrated scheduled scans with Crontab for automated detection.</p>
+    <p><strong>Impact:</strong> Reinforced core concepts of log analysis, alert triaging, and building custom security tooling with Python.</p>
+  </div>
+
+  <div class="card">
+    <h3 class="project-title">🦠 Malware Analysis & Reverse Engineering Sandbox</h3>
+    <p><strong>Tech Used:</strong> Remnux, Ghidra, Process Hacker, Any.Run, VirusTotal</p>
+    <p>Analyzed Windows malware samples in a controlled sandbox environment using both static and dynamic techniques. Used Ghidra to decompile binaries and study suspicious functions. Ran malware in an isolated VM to observe system-level behavior such as registry edits, file drops, and outbound connections. Compared hashes on VirusTotal and documented IoCs.</p>
+    <p><strong>Impact:</strong> Showcased deep analytical thinking, attention to technical detail, and understanding of malware behavior—essential skills for threat intel or SOC roles.</p>
+  </div>
+
+  <div class="card">
+    <h3 class="project-title">📊 Cybersecurity Metrics Dashboard with Power BI</h3>
+    <p><strong>Tech Used:</strong> Power BI, Excel, JSON Logs, DAX</p>
+    <p>Designed an interactive cybersecurity dashboard using Power BI to visualize log data and attack patterns. Processed raw JSON logs from simulated environments and visualized key security KPIs such as number of failed logins, most targeted endpoints, and top 5 source IPs.</p>
+    <p><strong>Impact:</strong> Demonstrated the intersection of data analysis and cybersecurity, emphasizing security visibility and incident trend analysis.</p>
+  </div>
+</section>
+<section class="labs" id="labs">
+  <h2 class="section-title">🧪 Labs</h2>
+
+  <div class="card">
+    <h3 class="project-title">🔍 Blue Team SOC Analyst Lab (TryHackMe)</h3>
+    <p><strong>Platform:</strong> TryHackMe | <strong>Tools Used:</strong> Splunk, Wireshark, Suricata</p>
+    <p>Completed a hands-on blue team lab simulating a real SOC environment. Investigated a simulated ransomware attack using Splunk to analyze logs and detect Indicators of Compromise (IOCs). Practiced network forensics with Wireshark and used Suricata alerts to trace intrusion paths.</p>
+    <p><strong>Impact:</strong> Strengthened skills in log analysis, correlation rules, and identifying attacker TTPs in a SIEM environment.</p>
+  </div>
+
+  <div class="card">
+    <h3 class="project-title">🔐 Active Directory Exploitation Lab</h3>
+    <p><strong>Platform:</strong> Hack The Box Academy | <strong>Tools Used:</strong> BloodHound, Mimikatz, Evil-WinRM</p>
+    <p>Explored real-world attack paths in Windows Active Directory environments. Mapped privilege escalation chains using BloodHound, dumped credentials with Mimikatz, and exploited misconfigured services through Evil-WinRM. Simulated lateral movement and domain persistence techniques.</p>
+    <p><strong>Impact:</strong> Gained practical experience in AD exploitation, critical for penetration testing and red team engagements.</p>
+  </div>
+
+  <div class="card">
+    <h3 class="project-title">📡 Network Traffic Analysis Lab</h3>
+    <p><strong>Tools Used:</strong> Wireshark, tcpdump, Nmap, Tshark</p>
+    <p>Captured and analyzed live network traffic to identify suspicious packets, DNS tunneling, and port scanning activity. Used filters to dissect packet flows, extracted payloads, and correlated unusual behavior to common attack vectors.</p>
+    <p><strong>Impact:</strong> Built strong foundations in packet analysis, network security monitoring, and anomaly detection techniques.</p>
+  </div>
+
+  <div class="card">
+    <h3 class="project-title">🛡️ Web Application Security Lab</h3>
+    <p><strong>Platform:</strong> PortSwigger Web Security Academy | <strong>Tools Used:</strong> Burp Suite, OWASP ZAP</p>
+    <p>Completed multiple web security challenges targeting common vulnerabilities including SQL Injection, XSS, CSRF, and Broken Authentication. Used Burp Suite to intercept and manipulate web traffic, and practiced manual as well as automated exploitation techniques.</p>
+    <p><strong>Impact:</strong> Reinforced understanding of OWASP Top 10 threats and secure coding practices essential for secure web development and auditing.</p>
+  </div>
+
+  <div class="card">
+    <h3 class="project-title">🧬 Malware Analysis Practice Lab</h3>
+    <p><strong>Platform:</strong> FLARE-VM | <strong>Tools Used:</strong> PEStudio, ProcMon, x64dbg</p>
+    <p>Analyzed suspicious executable files in a sandboxed virtual lab. Conducted static and dynamic analysis to trace behavior, inspect registry changes, identify obfuscation techniques, and locate C2 communication attempts. Reverse-engineered malicious binaries for deeper insights.</p>
+    <p><strong>Impact:</strong> Sharpened skills in dissecting malware, which supports threat hunting and incident response scenarios.</p>
+  </div>
+</section>
   <section id="resume" class="section">
     <div class="container">
       <h2 class="section-title sr-fade-down">📄 My Resume</h2>
 
       <div class="resume-actions sr-fade-up">
-        <a href="assets/Ashley_Wenwa_CV.pdf" class="btn" download>⬇️ Download My CV</a>
+        <a href="https://ashley-wenwa.github.io/assets/Ashley_Wenwa_CV.pdf" class="btn secondary-btn" download>⬇️ Download CV</a>
         <a href="https://ashley-wenwa.github.io/assets/Ashley_Wenwa_CV.pdf" class="btn secondary-btn" target="_blank">🔍 View Online</a>
       </div>
 
@@ -154,7 +179,6 @@
           <ul>
             <li>Recruited and engaged youth participants for the WFP mentorship program.</li>
             <li>Coordinated mentorship activities and maintained clear communication among mentees and leaders.</li>
-            <li>Fostered a collaborative learning environment that encouraged youth participation in tech.</li>
           </ul>
         </div>
 
@@ -172,7 +196,7 @@
           <h3>📜 Certifications</h3>
           <ul>
             <li><strong>Cybershujaa Women's Cyber Security Bootcamp</strong> – Training on advocacy for women in tech spaces; either as employees or entrepreneurs.</li>
-            <li><strong>SC-900</strong> – Security, Compliance, and Identity Fundamentals with Microsoft Entra.</li>
+            <li><strong>Security, Compliance, and Identity Fundamentals with Microsoft Entra (SC-900)</strong> – Microsoft Entra and Identity Access Management</li>
             <li><strong>Cisco Cyber Threat Management</strong> – CVSS, Incident Response, Threat Detection, and Vulnerability Management.</li>
           </ul>
         </div>
@@ -188,29 +212,53 @@
       </div>
     </div>
   </section>
+<section class="contact" id="contact">
+  <h2 class="section-title">📞 Contact</h2>
 
-  <section id="contact" class="section">
-    <div class="container">
-      <h2 class="section-title sr-fade-down">📬 Contact Me</h2>
-      <div class="contact-links sr-fade-up">
-        <a href="mailto:ashleywenwa@example.com"><i class="fas fa-envelope"></i> Email</a><br />
-        <a href="https://github.com/WENWA444" target="_blank"><i class="fab fa-github"></i> GitHub</a><br />
-        <a href="https://linkedin.com/in/ashley-wenwa" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-      </div>
-    </div>
-  </section>
+  <div class="card">
+    <h3 class="project-title">📧 Email</h3>
+    <p><a href="mailto:wenwaashley@gmail.com">wenwaashley@gmail.com.com</a></p>
+  </div>
+
+  <div class="card">
+    <h3 class="project-title">📱 Phone</h3>
+    <p><a href="tel:+254 787 998 416">+254 787 998 416</a></p>
+  </div>
+
+  <div class="card">
+    <h3 class="project-title">🔗 LinkedIn</h3>
+    <p><a href="https://linkedin.com/in/ashley-wenwa" target="_blank">linkedin.com/in/ashley-wenwa</a></p>
+  </div>
+
+  <div class="card">
+    <h3 class="project-title">💻 GitHub</h3>
+    <p><a href="https://github.com/ashley-wenwa" target="_blank">github.com/ashley-wenw</a></p>
+  </div>
+</section>
+
 
   <footer>
     <p>Built with 💻 & ☕ by Ashley Wenwa © 2025</p>
   </footer>
+<script>
+  const toggle = document.getElementById("dark-mode-toggle");
+  const body = document.body;
 
-  <script>
-    ScrollReveal().reveal('.sr-fade-up', { origin: 'bottom', distance: '20px', duration: 800, delay: 100 });
-    ScrollReveal().reveal('.sr-fade-down', { origin: 'top', distance: '20px', duration: 800, delay: 100 });
+  // Load saved mode from localStorage
+  if (localStorage.getItem("theme") === "dark") {
+    body.classList.add("dark-mode");
+  }
 
-    function toggleDarkMode() {
-      document.body.classList.toggle('dark-mode');
+  toggle.addEventListener("click", () => {
+    body.classList.toggle("dark-mode");
+    // Save preference
+    if (body.classList.contains("dark-mode")) {
+      localStorage.setItem("theme", "dark");
+    } else {
+      localStorage.setItem("theme", "light");
     }
-  </script>
+  });
+</script>
+
 </body>
 </html>
