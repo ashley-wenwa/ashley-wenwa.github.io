@@ -2,26 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ashley Wenwa | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
 <body>
 
-  <!-- Header -->
   <header>
     <h1>Ashley Wenwa</h1>
     <nav>
       <a href="#about">About</a>
-      <a href="#resume">Resume</a>
+      <a href="#skills">Tech Stack</a>
       <a href="#projects">Projects</a>
       <a href="#labs">Labs</a>
-      <a href="#skills">Skills</a>
+      <a href="#resume">Resume</a>
       <a href="#contact">Contact</a>
     </nav>
+    <button class="toggle-darkmode" onclick="toggleDarkMode()">🌓</button>
   </header>
 
-  <!-- Hero -->
   <section id="hero" class="section">
     <div class="container">
       <div class="profile-photo">
@@ -31,131 +32,167 @@
     </div>
   </section>
 
-  <!-- About Section -->
   <section id="about" class="section">
     <div class="container">
-      <h2 class="section-title"> About Me</h2>
-      <p>Hello👋, I'm Ashley Wenwa, a cybersecurity enthusiast with a background in Mathematics and Computer Science.</p>
-<p>I specialize in cloud security, SIEM tools and threat detection, with a growing focus on offensive security and hands-on lab work.
-</p>I thrive in collaborative environments, communicate well and enjoy sharing knowledge.</p>
+      <h2 class="section-title sr-fade-down"> About Me</h2>
+      <div class="sr-fade-up">
+        <p>Hello👋, I'm Ashley Wenwa, a cybersecurity enthusiast with a background in Mathematics and Computer Science.</p>
+        <p>I specialize in cloud security, SIEM tools and threat detection, with a growing focus on offensive security and hands-on lab work.</p>
+        <p>I thrive in collaborative environments, communicate well and enjoy sharing knowledge.</p>
+      </div>
     </div>
   </section>
 
-  <!-- Projects Section -->
+  <section id="soft-skills" class="section">
+    <div class="container">
+      <h2 class="section-title sr-fade-down">💡 Soft Skills</h2>
+      <ul class="soft-skills-list sr-fade-up">
+        <li>🤝 Team Collaboration</li>
+        <li>🎯 Attention to Detail</li>
+        <li>🗣️ Communication</li>
+        <li>⏱️ Time Management</li>
+        <li>🧠 Problem Solving</li>
+        <li>⚖️ Accountability</li>
+        <li>🔁 Adaptability</li>
+        <li>🧘 Conflict Resolution</li>
+        <li>🚀 Initiative</li>
+        <li>🔍 Critical Thinking</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="skills" class="section">
+    <div class="container">
+      <h2 class="section-title sr-fade-down">🧰 Tech Stack</h2>
+      <div class="tech-icons sr-fade-up">
+        <img src="assets/icons/python.svg" alt="Python" class="tech-img" title="Python" />
+        <img src="assets/icons/sql.svg" alt="SQL" class="tech-img" title="SQL" />
+        <img src="assets/icons/cplusplus.svg" alt="C++" class="tech-img" title="C++" />
+        <img src="assets/icons/azure.svg" alt="Azure" class="tech-img" title="Microsoft Azure" />
+        <img src="assets/icons/kali.svg" alt="Kali Linux" class="tech-img" title="Kali Linux" />
+        <img src="assets/icons/powerbi.svg" alt="Power BI" class="tech-img" title="Power BI" />
+        <img src="assets/icons/mysql.svg" alt="MySQL" class="tech-img" title="MySQL" />
+        <img src="assets/icons/vscode.svg" alt="VS Code" class="tech-img" title="Visual Studio Code" />
+        <img src="assets/icons/github.svg" alt="GitHub" class="tech-img" title="GitHub" />
+        <img src="assets/icons/linux.svg" alt="Linux CLI" class="tech-img" title="Linux CLI" />
+        <img src="assets/icons/html5.svg" alt="HTML5" class="tech-img" title="HTML5/CSS3" />
+        <img src="assets/icons/excel.svg" alt="Excel" class="tech-img" title="Microsoft Excel" />
+      </div>
+    </div>
+  </section>
+
   <section id="projects" class="section">
     <div class="container">
-      <h2 class="section-title">🚀 Projects</h2>
+      <h2 class="section-title sr-fade-down">🚀 Projects</h2>
       <div class="projects-grid">
-        <div class="project-card">
-          <h3>Home Network Security Hardening</h3>
+        <div class="project-card sr-fade-up">
+          <h3>🔐 Home Network Security Hardening</h3>
           <ul>
-            <li>Configured firewalls and port scans in a home lab.</li>
+            <li>Evaluated router settings and disabled insecure protocols like WPS and UPnP.</li>
+            <li>Implemented firewall rules, port blocking, and MAC address filtering.</li>
+            <li>Scanned connected devices with Nmap to identify vulnerabilities.</li>
+            <li>Documented steps and results for GitHub showcasing.</li>
           </ul>
         </div>
-        <div class="project-card">
-          <h3>Wazuh SIEM Deployment</h3>
+        <div class="project-card sr-fade-up">
+          <h3>📊 Wazuh SIEM Deployment</h3>
           <ul>
-            <li>Set up SIEM monitoring and log analysis with Wazuh.</li>
+            <li>Deployed and configured Wazuh manager, agent, and dashboard.</li>
+            <li>Monitored endpoint logs, tuned rules, and created alerts for real-time detection.</li>
+            <li>Simulated brute-force attacks and documented incident response workflow.</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Labs Section -->
   <section id="labs" class="section">
     <div class="container">
-      <h2 class="section-title">🔬 Labs</h2>
+      <h2 class="section-title sr-fade-down">🔬 Labs</h2>
       <div class="projects-grid">
-        <div class="project-card">
-          <h3>TryHackMe: Pre-Security Path</h3>
+        <div class="project-card sr-fade-up">
+          <h3>🧪 TryHackMe: Pre-Security Path</h3>
           <ul>
-            <li>Linux, networking, enumeration labs completed.</li>
+            <li>Completed modules in Linux, Networking, Cybersecurity Essentials, and Web Hacking.</li>
+            <li>Practiced system permissions, command-line enumeration, and network scanning.</li>
+            <li>Achieved badges and documented learning process.</li>
           </ul>
         </div>
-        <div class="project-card">
-          <h3>Malware Analysis Lab</h3>
+        <div class="project-card sr-fade-up">
+          <h3>🦠 Malware Analysis Lab</h3>
           <ul>
-            <li>Reverse engineering malware using Procmon and Ghidra.</li>
+            <li>Set up isolated malware lab with Windows Sandbox and VMware.</li>
+            <li>Analyzed malware with Procmon, Wireshark, Autoruns, and Process Explorer.</li>
+            <li>Used Ghidra for static analysis and documented indicators of compromise (IOCs).</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
- <section id="resume" class="section">
-  <div class="container">
-    <h2 class="section-title sr-fade-down">📄 My Resume</h2>
 
-    <!-- Download CV Button -->
-    <div class="resume-actions sr-fade-up">
-      <a href="assets/docs/Ashley-Wenwa-CV.pdf" class="btn primary-btn" download>
-        ⬇️ Download My CV
-      </a>
-    </div>
+  <section id="resume" class="section">
+    <div class="container">
+      <h2 class="section-title sr-fade-down">📄 My Resume</h2>
 
-    <div class="projects-grid">
-      <div class="project-card sr-fade-up">
-        <h3>💼 My Experience</h3>
-        <p><strong>Freelance Data Analyst – Nairobi</strong><br>
-          <em>March 2023 – September 2024</em>
-        </p>
-        <ul>
-          <li>Delivered data analysis services to five clients, including two long-term partnerships.</li>
-          <li>Designed and maintained interactive dashboards using Power BI to support client decision-making.</li>
-          <li>Queried and transformed large datasets using SQL to produce structured reports and insights.</li>
-          <li>Collaborated with clients to understand business needs and define actionable metrics.</li>
-          <li>Managed multiple client projects independently, ensuring timely delivery and satisfaction.</li>
-        </ul>
-
-        <p><strong>Volunteer – United Nations (WFP), Nairobi</strong><br>
-          <em>March 2023 – April 2024</em>
-        </p>
-        <ul>
-          <li>Recruited and engaged youth participants for the WFP mentorship program.</li>
-          <li>Coordinated mentorship activities and maintained clear communication among mentees and leaders.</li>
-          <li>Fostered a collaborative learning environment that encouraged youth participation in tech.</li>
-        </ul>
+      <div class="resume-actions sr-fade-up">
+        <a href="assets/Ashley_Wenwa_CV.pdf" class="btn" download>⬇️ Download My CV</a>
+        <a href="https://ashley-wenwa.github.io/assets/Ashley_Wenwa_CV.pdf" class="btn secondary-btn" target="_blank">🔍 View Online</a>
       </div>
 
-      <div class="project-card sr-fade-up">
-        <h3>🎓 Education</h3>
-        <p><strong>Kenyatta University</strong><br>
-          <em>BSc in Mathematics & Computer Science</em><br>
-          <em>Graduated: 2024</em>
-        </p>
-        <ul>
-          <li>Specialized in mathematics, programming, and data analysis.</li>
-          <li>Completed coursework in algorithms, databases, networking, and object-oriented programming.</li>
-          <li>Worked on academic and extracurricular tech projects using Python, SQL, and C++.</li>
-        </ul>
-      </div>
+      <div class="projects-grid">
+        <div class="project-card sr-fade-up">
+          <h3>💼 My Experience</h3>
+          <p><strong>Freelance Data Analyst – Nairobi</strong><br><em>March 2023 – September 2024</em></p>
+          <ul>
+            <li>Delivered data analysis services to five clients, including two long-term partnerships.</li>
+            <li>Designed and maintained interactive dashboards using Power BI.</li>
+            <li>Queried and transformed large datasets using SQL to produce structured reports and insights.</li>
+            <li>Collaborated with clients to understand business needs and define actionable metrics.</li>
+            <li>Managed multiple client projects independently, ensuring timely delivery and satisfaction.</li>
+          </ul>
+          <p><strong>Volunteer – United Nations (WFP), Nairobi</strong><br><em>March 2023 – April 2024</em></p>
+          <ul>
+            <li>Recruited and engaged youth participants for the WFP mentorship program.</li>
+            <li>Coordinated mentorship activities and maintained clear communication among mentees and leaders.</li>
+            <li>Fostered a collaborative learning environment that encouraged youth participation in tech.</li>
+          </ul>
+        </div>
 
-      <div class="project-card sr-fade-up">
-        <h3>📜 Certifications</h3>
-        <ul>
-          <li><strong>Cybershujaa Women's Cyber Security Bootcamp</strong> – Training on advocacy for women in tech spaces; either as employees or entrepreneurs.</li>
-          <li><strong>Security, Compliance, and Identity Fundamentals (SC-900)</strong> – Microsoft Entra and Identity Access Management (IAM).</li>
-          <li><strong>Cisco Cyber Threat Management</strong> – CVSS, Incident Response, Threat Detection, and Vulnerability Management.</li>
-        </ul>
-      </div>
+        <div class="project-card sr-fade-up">
+          <h3>🎓 Education</h3>
+          <p><strong>Kenyatta University</strong><br><em>BSc in Mathematics & Computer Science – 2024</em></p>
+          <ul>
+            <li>Specialized in mathematics, programming, and data analysis.</li>
+            <li>Completed coursework in algorithms, databases, networking, and object-oriented programming.</li>
+            <li>Worked on academic and extracurricular tech projects using Python, SQL, and C++.</li>
+          </ul>
+        </div>
 
-      <div class="project-card sr-fade-up">
-        <h3>🛠️ Key Skills</h3>
-        <ul>
-          <li><strong>Technical:</strong> Python, SQL, C++, Power BI, HTML/CSS</li>
-          <li><strong>Cybersecurity:</strong> Azure Security, Kali Linux, GRC fundamentals</li>
-          <li><strong>Tools:</strong> Visual Studio Code, GitHub, MySQL, Microsoft Excel, Linux CLI</li>
-        </ul>
+        <div class="project-card sr-fade-up">
+          <h3>📜 Certifications</h3>
+          <ul>
+            <li><strong>Cybershujaa Women's Cyber Security Bootcamp</strong> – Training on advocacy for women in tech spaces; either as employees or entrepreneurs.</li>
+            <li><strong>SC-900</strong> – Security, Compliance, and Identity Fundamentals with Microsoft Entra.</li>
+            <li><strong>Cisco Cyber Threat Management</strong> – CVSS, Incident Response, Threat Detection, and Vulnerability Management.</li>
+          </ul>
+        </div>
+
+        <div class="project-card sr-fade-up">
+          <h3>🛠️ Key Skills</h3>
+          <ul>
+            <li><strong>Technical:</strong> Python, SQL, C++, Power BI, HTML/CSS</li>
+            <li><strong>Cybersecurity:</strong> Azure Security, Kali Linux, GRC fundamentals</li>
+            <li><strong>Tools:</strong> Visual Studio Code, GitHub, MySQL, Microsoft Excel, Linux CLI</li>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-  <!-- Contact Section -->
   <section id="contact" class="section">
     <div class="container">
-      <h2 class="section-title">📬 Contact Me</h2>
-      <div class="contact-links">
+      <h2 class="section-title sr-fade-down">📬 Contact Me</h2>
+      <div class="contact-links sr-fade-up">
         <a href="mailto:ashleywenwa@example.com"><i class="fas fa-envelope"></i> Email</a><br />
         <a href="https://github.com/WENWA444" target="_blank"><i class="fab fa-github"></i> GitHub</a><br />
         <a href="https://linkedin.com/in/ashley-wenwa" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
@@ -163,26 +200,17 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
-    <p>Built by Ashley Wenwa © 2025</p>
+    <p>Built with 💻 & ☕ by Ashley Wenwa © 2025</p>
   </footer>
-<script>
-  ScrollReveal({
-    reset: false,
-    distance: '50px',
-    duration: 1000,
-    delay: 100,
-    easing: 'ease-in-out',
-    mobile: true
-  });
 
-  ScrollReveal().reveal('.sr-fade-down', { origin: 'top' });
-  ScrollReveal().reveal('.sr-fade-up', { origin: 'bottom' });
-  ScrollReveal().reveal('.sr-fade-left', { origin: 'left' });
-  ScrollReveal().reveal('.sr-fade-right', { origin: 'right' });
-  ScrollReveal().reveal('.sr-zoom-in', { scale: 0.85 });
-</script>
+  <script>
+    ScrollReveal().reveal('.sr-fade-up', { origin: 'bottom', distance: '20px', duration: 800, delay: 100 });
+    ScrollReveal().reveal('.sr-fade-down', { origin: 'top', distance: '20px', duration: 800, delay: 100 });
 
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
 </body>
 </html>
