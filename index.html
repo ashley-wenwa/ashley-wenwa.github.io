@@ -62,7 +62,7 @@
     <img src="assets/img/notion.svg" alt="Notion" title="Notion" class="tech-img" />
     <img src="assets/img/excel.png" alt="Microsoft Excel" title="Excel" class="tech-img" />
     <img src="assets/img/powerbi.svg" alt="Power BI" title="Power BI" class="tech-img" />
-    <i class="fab fa-github" title="GitHub"></i>
+   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" title="GitHub" class="tech-img">
   </div>
 </section>
 
@@ -70,36 +70,51 @@
   <h2>💻 Projects</h2>
   <div class="project-card">
     <h3>Home Network Security Hardening</h3>
-    <p>Secured my home network with router configuration, firewall rules, and device isolation. Included a vulnerability scan to identify common risks.</p>
-    <p><strong>Tools:</strong> Nmap, Nessus, Wireshark, Router UI</p>
-  </div>
   <div class="project-card">
-    <h3>Wazuh SIEM Deployment</h3>
-    <p>Deployed Wazuh on a virtual lab environment and configured it to detect brute-force attacks, suspicious logins, and malware events.</p>
-    <p><strong>Tools:</strong> Wazuh, ELK Stack, VirtualBox</p>
-  </div>
-  <div class="project-card">
-    <h3>Custom Mini SIEM in Python</h3>
-    <p>Created a basic log monitoring and alerting system in Python, simulating core SIEM features like log parsing and anomaly detection.</p>
-    <p><strong>Tools:</strong> Python, Regex, JSON</p>
-  </div>
-  <div class="project-card">
-    <h3>Malware Analysis Lab</h3>
-    <p>Used a sandboxed environment to analyze malware behavior, identify indicators of compromise, and document persistence methods.</p>
-    <p><strong>Tools:</strong> Remnux, PEStudio, Procmon</p>
-  </div>
+  <h3>Home Network Security Hardening</h3>
+  <p>Designed and implemented a layered defense strategy to secure my personal home network. This included disabling remote access, applying firewall rules, isolating IoT devices, and regularly scanning for vulnerabilities.</p>
+  <p><strong>Impact:</strong> Reduced attack surface and ensured better visibility into connected devices.</p>
+  <p><strong>Tools:</strong> Router Admin UI, Nmap, Nessus, Wireshark</p>
+</div>
+
+<div class="project-card">
+  <h3>Wazuh SIEM Deployment</h3>
+  <p>Deployed Wazuh on a Linux-based virtual lab and integrated it with the ELK stack to monitor system logs, detect threats, and trigger alerts. Configured rules for brute-force detection, unauthorized access, and malware events.</p>
+  <p><strong>Impact:</strong> Gained hands-on experience in threat detection and real-time log monitoring.</p>
+  <p><strong>Tools:</strong> Wazuh, ELK Stack (Elasticsearch, Logstash, Kibana), VirtualBox</p>
+</div>
+
+<div class="project-card">
+  <h3>Custom Mini SIEM in Python</h3>
+  <p>Developed a lightweight SIEM-like tool using Python that parses local system logs, detects predefined anomalies (e.g., failed logins), and sends alerts via the console or file output.</p>
+  <p><strong>Impact:</strong> Demonstrated understanding of log parsing, regular expressions, and basic anomaly detection concepts.</p>
+  <p><strong>Tools:</strong> Python, Regex, JSON</p>
+</div>
+
+<div class="project-card">
+  <h3>Malware Analysis Lab</h3>
+  <p>Executed and analyzed malware samples in a secure sandbox environment to observe behavior such as file creation, persistence mechanisms, and network activity. Documented Indicators of Compromise (IoCs).</p>
+  <p><strong>Impact:</strong> Improved ability to recognize and report on malware traits in a safe environment.</p>
+  <p><strong>Tools:</strong> Remnux, PEStudio, Procmon, Wireshark</p>
+</div>
 </section>
 
 <section id="labs" class="reveal">
   <h2>🧪 Labs & CTFs</h2>
-  <div class="card">
-    <h3>TryHackMe: Simple CTF</h3>
-    <p>Performed enumeration, brute-forced SSH credentials, and escalated privileges using LinPEAS.</p>
-  </div>
-  <div class="card">
-    <h3>CyberShujaa Network Defense Lab</h3>
-    <p>Detected brute-force attacks using Wireshark, blocked them with Fail2Ban and iptables.</p>
-  </div>
+<div class="card">
+  <h3>TryHackMe: Simple CTF</h3>
+  <p>Completed an introductory Capture The Flag (CTF) challenge involving system enumeration, brute-force login attempts, and privilege escalation. Identified and exploited system weaknesses to gain root access.</p>
+  <p><strong>Skills Gained:</strong> Enumeration, SSH brute-forcing, privilege escalation (LinPEAS)</p>
+  <p><strong>Tools:</strong> Nmap, Hydra, LinPEAS</p>
+</div>
+
+<div class="card">
+  <h3>CyberShujaa Network Defense Lab</h3>
+  <p>Monitored network traffic to detect brute-force attacks in a simulated environment. Implemented defensive measures such as IP banning and traffic filtering using Fail2Ban and iptables.</p>
+  <p><strong>Skills Gained:</strong> Intrusion detection, Linux firewall management, automated attack blocking</p>
+  <p><strong>Tools:</strong> Wireshark, Fail2Ban, iptables</p>
+</div>
+  
 </section>
 
 <section id="resume" class="reveal">
