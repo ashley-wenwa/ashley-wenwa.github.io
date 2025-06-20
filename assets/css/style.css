@@ -317,4 +317,15 @@ footer {
   content: "✅ ";
   color: #28a745;
 }
+.resume-card ul {
+  list-style: none;
+  padding-left: 0;
+  text-align: left;
+}
+
+.resume-card ul li::before {
+  content: "✅ ";
+  color: #28a745;
+  margin-right: 6px;
+}
 
