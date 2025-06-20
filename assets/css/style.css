@@ -145,6 +145,7 @@ footer {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 24px;
   justify-content: center;
+  margin-top: 30px;
 }
 
 .project-card {
@@ -153,6 +154,7 @@ footer {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
 }
 
 .project-card:hover {
@@ -340,13 +342,12 @@ footer {
   line-height: 1.6;
 }
 .project-card {
-  width: 100%;
-  min-width: 280px;
   background-color: var(--card-bg);
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
 }
 
 #resume ul {
@@ -361,12 +362,7 @@ footer {
   margin-bottom: 8px;
   line-height: 1.6;
 }
-#resume .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
-  justify-content: center;
-  margin-top: 30px;
+
 }
 .container {
   max-width: 1200px;
