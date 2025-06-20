@@ -361,3 +361,34 @@ body.dark-mode .soft-skills .card {
 body.dark-mode .tech-logo {
   filter: brightness(1.1) drop-shadow(0 0 2px rgba(255, 255, 255, 0.05));
 }
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  gap: 1rem;
+  justify-items: center;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.tech-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px; /* consistent height for all */
+}
+
+.tech-logo {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.1));
+}
+
+.tech-logo:hover {
+  transform: scale(1.1);
+}
+
+body.dark-mode .tech-logo {
+  filter: brightness(1.1) drop-shadow(0 0 2px rgba(255, 255, 255, 0.05));
+}
