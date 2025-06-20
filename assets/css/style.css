@@ -265,14 +265,6 @@ a:hover {
   margin-bottom: 0.8em;
 }
 
-.soft-skills-list li::before {
-  content: "✔";
-  position: absolute;
-  left: 0;
-  color: var(--accent-color);
-  font-weight: bold;
-}
-
 /* ✅ ScrollReveal Animations */
 .reveal-soft {
   opacity: 0;
@@ -283,4 +275,12 @@ a:hover {
 .reveal-soft.active {
   opacity: 1;
   transform: translateY(0);
+}
+.reveal-soft {
+  opacity: 1 !important;
+  transform: none !important;
+}
+.soft-skills-list li {
+  padding-left: 0; /* Remove space that was there for the checkmark */
+  margin-bottom: 0.8em;
 }
