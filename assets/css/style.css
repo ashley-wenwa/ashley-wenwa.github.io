@@ -140,18 +140,23 @@ footer {
 }
 
 /* Project & Card Styling */
-.project-card,
-.card {
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.project-card {
   background-color: var(--card-bg);
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  margin-bottom: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project-card:hover,
-.card:hover {
+.project-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
@@ -323,23 +328,6 @@ footer {
   gap: 24px;
   margin-top: 30px;
   justify-content: center;
-}
-
-.resume-card {
-  background-color: var(--card-bg);
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  margin-bottom: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: 100%;
-  max-width: 320px;
-  text-align: left;
-}
-
-.resume-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
 .resume-card h3 {
