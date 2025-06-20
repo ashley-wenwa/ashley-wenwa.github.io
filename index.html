@@ -118,21 +118,41 @@
 </section>
 
 <section id="resume" class="reveal">
-  <h2>📄 Resume</h2>
-  <ul>
-    <li><strong>🎓 Education:</strong> BSc Mathematics & Computer Science</li>
-    <li><strong>💼 Experience:</strong>
-      <ul>
-        <li>Freelance Data Analyst – SQL & Power BI</li>
-        <li>UN Volunteer – Youth mentorship, outreach coordination</li>
-      </ul>
-    </li>
-    <li><strong>📜 Certifications:</strong> CyberShujaa, Cisco, Microsoft</li>
-    <li><strong>🛠️ Skills:</strong> Python, SQL, Azure, SIEM, Kali Linux, Power BI</li>
-  </ul>
-  <p style="text-align:center;">
-    <a href="assets/Ashley_Wenwa_CV.pdf" class="cv-button" target="_blank">📄 Download My CV</a>
-  </p>
+  <div class="container">
+    <h2 class="section-title sr-fade-down">📄 My Resume</h2>
+
+    <div class="resume-actions sr-fade-up">
+      <a href="assets/resume/Ashley-Wenwa-Resume.pdf" target="_blank" class="btn primary-btn">👁️ View Resume</a>
+      <a href="assets/resume/Ashley-Wenwa-Resume.pdf" download class="btn secondary-btn">⬇️ Download PDF</a>
+    </div>
+
+    <div class="resume-preview sr-zoom-in">
+      <iframe src="assets/Ashley_Wenwa_CV.pdf" width="100%" height="500px" title="Resume Preview"></iframe>
+    </div>
+
+    <div class="resume-highlights">
+      <div class="resume-card sr-fade-left">
+        <h3>🎓 Education</h3>
+        <p>BSc in Mathematics & Computer Science</p>
+        <p>Kenyatta University — 2024</p>
+      </div>
+      <div class="resume-card sr-fade-up">
+        <h3>📜 Certifications</h3>
+        <ul>
+          <li>Cybershujaa Women's CyberSecurity Bootcamp</li>
+          <li>Security, Compliance and Identity Fundamentals (SC-900)</li>
+          <li>Cisco Cyber Threat Management</li>
+        </ul>
+      </div>
+      <div class="resume-card sr-fade-right">
+        <h3>🛠️ Key Skills</h3>
+        <ul>
+          <li>Python, SQL, C++, Kali Linux</li>
+          <li>Azure, SIEM Tools, Power BI</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section id="contact" class="reveal contact-section">
@@ -199,6 +219,22 @@
   function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
+</script>
+<script>
+  ScrollReveal({
+    reset: false,
+    distance: '50px',
+    duration: 1000,
+    delay: 100,
+    easing: 'ease-in-out',
+    mobile: true
+  });
+
+  ScrollReveal().reveal('.sr-fade-down', { origin: 'top' });
+  ScrollReveal().reveal('.sr-fade-up', { origin: 'bottom' });
+  ScrollReveal().reveal('.sr-fade-left', { origin: 'left' });
+  ScrollReveal().reveal('.sr-fade-right', { origin: 'right' });
+  ScrollReveal().reveal('.sr-zoom-in', { scale: 0.85 });
 </script>
 
 </body>
