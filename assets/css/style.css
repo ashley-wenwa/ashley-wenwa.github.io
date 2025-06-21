@@ -511,3 +511,16 @@ body.dark-mode .resume-actions .btn.secondary-btn:hover {
   font-size: 1rem;
   line-height: 1.6;
 }
+#contact {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+#contact .contact-form {
+  max-width: 100%;
+  width: 100%;
+  padding: 40px;
+  box-sizing: border-box;
+}
