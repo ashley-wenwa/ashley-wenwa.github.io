@@ -8,10 +8,12 @@
   <script src="https://unpkg.com/scrollreveal"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
-<body>
+<body> <button onclick="scrollToTop()" id="topBtn" title="Go to top">↑</button>
 
   <header>
     <h1>Ashley Wenwa</h1>
+   <div id="typing-text" class="typing"></div>
+ 
     <nav>
       <a href="#about">About</a>
       <a href="#skills">Tech Stack</a>
@@ -20,7 +22,7 @@
       <a href="#resume">Resume</a>
       <a href="#contact">Contact</a>
     </nav>
-   <button id="dark-mode-toggle">🌙 Toggle Dark Mode</button> 
+   <button id="mode-toggle" class="toggle-darkmode">🌙</button>
   </header>
 
   <section id="hero" class="section">
@@ -28,7 +30,6 @@
       <div class="profile-photo">
         <img src="assets/img/profile.jpg" alt="Ashley Wenwa" class="animated-photo" />
       </div>
-      <div class="typing">Cybersecurity Enthusiast | SIEM & Python | CTF Player</div>
     </div>
   </section>
 
@@ -36,9 +37,10 @@
     <div class="container">
       <h2 class="section-title sr-fade-down"> About Me</h2>
       <div class="sr-fade-up">
-        <p>Hello👋, I'm Ashley Wenwa, a cybersecurity enthusiast with a background in Mathematics and Computer Science.</p>
-        <p>I specialize in cloud security, SIEM tools and threat detection, with a growing focus on offensive security and hands-on lab work.</p>
-        <p>I thrive in collaborative environments, communicate well and enjoy sharing knowledge.</p>
+      <p>Hello 👋 I'm Ashley Wenwa — a cybersecurity professional with a foundation in Mathematics and Computer Science.</p>
+<p>My focus lies in cloud security, SIEM tools, and threat detection. I bring hands-on experience through real-world labs and home lab deployments.</p>
+ </p> I am also expanding my expertise into offensive security, defensive security and malware analysis.</p>
+<p>Known for being detail-oriented and self-driven, I thrive in collaborative environments and enjoy breaking down complex concepts into practical solutions.</p>
       </div>
     </div>
   </section>
@@ -61,8 +63,8 @@
 </section>
   <section id="skills" class="section">
     <div class="container">
-      <h2 class="section-title sr-fade-down">🧰 Tech Stack</h2>
-      <div class="tech-icons sr-fade-up">
+      <h2 class="section-title sr-fade-down">🧰 My Tech Stack</h2>
+      <div class="tech-item sr-fade-up">
         <img src="assets/img/python.svg" alt="Python" class="tech-img" title="Python" />
         <img src="assets/img/sql.svg" alt="SQL" class="tech-img" title="SQL" />
         <img src="assets/img/azure.svg" alt="Azure" class="tech-img" title="Microsoft Azure" />
@@ -214,29 +216,32 @@
       </div>
     </div>
   </section>
-<section class="contact" id="contact">
-  <h2 class="section-title">📞 Contact</h2>
+<section id="contact" class="reveal contact-section">
+  <h2>📬 Contact Me</h2>
+    
+  <form action="https://formspree.io/f/mblyabol" method="POST">
+  <p><label>Name:<br><input type="text" name="name" required></label></p>
+  <p><label>Email:<br><input type="email" name="email" required></label></p>
+  <p><label>Message:<br><textarea name="message" rows="5" required></textarea></label></p>
+  <p><button type="submit">Send</button></p>
+</form>
 
-  <div class="projects-grid">
-    <div class="project-card">
-      <h3 class="project-title">📱 Phone</h3>
-      <p><a href="tel:+254787998416" class="contact-link">+254 787 998 416</a></p>
-    </div>
+  <div class="contact-links">
+    <a href="mailto:wenwaashley@gmail.com" target="_blank">
+      <i class="fas fa-envelope"></i> wenwaashley@gmail.com
+    </a><br>
 
-    <div class="project-card">
-      <h3 class="project-title">📧 Email</h3>
-      <p><a href="mailto:wenwaashley@gmail.com" class="contact-link">wenwaashley@gmail.com</a></p>
-    </div>
+    <a href="https://github.com/ashley-wenwa" target="_blank">
+      <i class="fab fa-github"></i> github.com/ashley-wenwa
+    </a><br>
 
-    <div class="project-card">
-      <h3 class="project-title">🔗 LinkedIn</h3>
-      <p><a href="https://linkedin.com/in/ashley-wenwa" target="_blank" class="contact-link">linkedin.com/in/ashley-wenwa</a></p>
-    </div>
+    <a href="https://linkedin.com/in/ashley-wenwa" target="_blank">
+      <i class="fab fa-linkedin"></i> linkedin.com/in/ashley-wenwa
+    </a><br>
 
-    <div class="project-card">
-      <h3 class="project-title">💻 GitHub</h3>
-      <p><a href="https://github.com/ashley-wenwa" target="_blank" class="contact-link">github.com/ashley-wenwa</a></p>
-    </div>
+    <a href="tel:+254787998416">
+      <i class="fas fa-phone"></i> +254 787 998 416
+    </a>
   </div>
 </section>
 
@@ -244,23 +249,66 @@
     <p>Built with 💻 & ☕ by Ashley Wenwa © 2025</p>
   </footer>
 <script>
-  const toggle = document.getElementById("dark-mode-toggle");
-  const body = document.body;
+  const toggle = document.getElementById('mode-toggle');
+  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-  // Load saved mode from localStorage
-  if (localStorage.getItem("theme") === "dark") {
-    body.classList.add("dark-mode");
+  // Set initial state
+  if (prefersDark) {
+    document.body.classList.add('dark-mode');
+    toggle.textContent = '🌞';
   }
 
-  toggle.addEventListener("click", () => {
-    body.classList.toggle("dark-mode");
-    // Save preference
-    if (body.classList.contains("dark-mode")) {
-      localStorage.setItem("theme", "dark");
-    } else {
-      localStorage.setItem("theme", "light");
-    }
+  toggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    toggle.textContent = document.body.classList.contains('dark-mode') ? '🌞' : '🌙';
   });
+</script>
+
+<script>
+  const typingElement = document.getElementById('typing-text');
+  const phrases = [
+    'Cybersecurity Enthusiast',
+    'Cloud Security Specialist',
+    'Threat Detection & SIEM',
+    'Python & Offensive Security'
+  ];
+  let phraseIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  function type() {
+    const currentPhrase = phrases[phraseIndex];
+    const displayText = currentPhrase.substring(0, charIndex);
+    typingElement.textContent = displayText;
+
+    if (!isDeleting && charIndex < currentPhrase.length) {
+      charIndex++;
+    } else if (isDeleting && charIndex > 0) {
+      charIndex--;
+    } else if (!isDeleting && charIndex === currentPhrase.length) {
+      isDeleting = true;
+      setTimeout(type, 1000);
+      return;
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      phraseIndex = (phraseIndex + 1) % phrases.length;
+    }
+
+    setTimeout(type, isDeleting ? 50 : 120);
+  }
+
+  type();
+</script>
+<script>
+  const topBtn = document.getElementById('topBtn');
+
+  window.onscroll = function () {
+    topBtn.style.display = window.scrollY > 200 ? 'block' : 'none';
+  };
+
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 </script>
 
 </body>
