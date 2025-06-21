@@ -413,3 +413,55 @@ body.dark-mode .tech-logo {
   color: var(--accent-color);
   border-bottom: 2px solid var(--accent-color);
 }
+/* Resume & Contact Card Improvements for Dark Mode */
+body.dark-mode .project-card,
+body.dark-mode .contact .card {
+  background-color: #2a2a2a;
+  color: #f1f1f1;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .project-card:hover,
+body.dark-mode .contact .card:hover {
+  background-color: #333333;
+  box-shadow: 0 6px 16px rgba(255, 255, 255, 0.08);
+}
+
+/* General hover effect for both sections (light & dark) */
+.contact .card:hover,
+.project-card:hover {
+  transform: scale(1.02);
+  transition: all 0.3s ease;
+}
+
+/* Contact Section Links */
+.contact .card a {
+  color: var(--accent-color);
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px dashed transparent;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.contact .card a:hover {
+  color: var(--text-color);
+  border-bottom: 1px dashed var(--accent-color);
+}
+
+/* Resume Action Buttons - Visibility in Dark Mode */
+body.dark-mode .resume-actions .btn.secondary-btn {
+  background-color: transparent;
+  color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+}
+
+body.dark-mode .resume-actions .btn.secondary-btn:hover {
+  background-color: var(--accent-color);
+  color: #121212;
+}
+
+/* Optional improvement for readability */
+.contact .card p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
