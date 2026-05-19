@@ -417,39 +417,75 @@ footer{background:var(--bg2);border-top:1px solid var(--border2);padding:1.8rem 
 
 <!-- PROJECTS -->
 <section id="projects">
-  <div class="s-divider"><span class="s-label">// 03 &mdash; projects</span><div class="s-divider-line"></div></div>
-  <h2 class="s-title">Security <span>Projects</span></h2>
-  <div class="projects-layout">
-    <div class="proj-card reveal">
-      <div class="proj-top"><span class="proj-num">01 / 03</span><span class="proj-badge badge-done">Complete</span></div>
+  <div class="s-div"><span class="s-ey">// 03 &mdash; projects</span><div class="s-line"></div></div>
+  <h2 class="s-ttl">All <span>Projects</span></h2>
+  <div class="pf-bar">
+    <button class="pf-btn on" onclick="filterP('all',this)">All </button>
+    <button class="pf-btn" onclick="filterP('security',this)">Security </button>
+    <button class="pf-btn" onclick="filterP('dev',this)">Dev Tools </button>
+  </div>
+  <div class="p-grid">
+
+    <!-- 1 PYTHON SIEM -->
+    <div class="pc rv" data-cat="security">
+      <div class="pc-top"><span class="pc-num">01</span><span class="pc-cat cat-sec">Security</span></div>
       <h3>Python SIEM Tool</h3>
-      <p>A custom log monitoring and alerting system built from scratch in Python. Implements detection rules to flag suspicious activity and sends alerts via email and console. Visualises attack types and frequency with Matplotlib and Plotly for real-time incident visibility.</p>
-      <div class="proj-stack"><span class="proj-tech">Python</span><span class="proj-tech">Matplotlib</span><span class="proj-tech">Plotly</span><span class="proj-tech">Log Monitoring</span><span class="proj-tech">Email Alerts</span></div>
-      <a href="https://github.com/ashley-wenwa/pyhthon-SIEM" target="_blank" rel="noopener" class="proj-link">
-        <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-        View on GitHub &rarr;
-      </a>
+      <p>Custom log monitoring and alerting system built in Python. Implements detection rules to flag suspicious activity, sends email/console alerts, and visualises attack types and frequency using Matplotlib and Plotly.</p>
+      <div class="pc-stack"><span class="ptag">Python</span><span class="ptag">Matplotlib</span><span class="ptag">Plotly</span><span class="ptag">Log Monitoring</span><span class="ptag">Alerting</span></div>
+      <div class="pb pb-done">Complete &mdash; Jun 2025</div>
+      <a href="https://github.com/ashley-wenwa/pyhthon-SIEM" target="_blank" rel="noopener" class="pc-link">View on GitHub &rarr;</a>
     </div>
-    <div class="proj-card reveal reveal-d1">
-      <div class="proj-top"><span class="proj-num">02 / 03</span><span class="proj-badge badge-done">Complete</span></div>
+
+    <!-- 2 SIMPLE HONEYPOT -->
+    <div class="pc rv d1" data-cat="security">
+      <div class="pc-top"><span class="pc-num">02</span><span class="pc-cat cat-sec">Security</span></div>
       <h3>Honeypot Deployment</h3>
-      <p>Provisioned a cloud VM as a honeypot with a hardened host and centralised log forwarding. Tracked attacker IPs, commands, tools used, file uploads, and brute-force attempts. Used Python scripts to analyse and visualise attack patterns, trends, and common tactics.</p>
-      <div class="proj-stack"><span class="proj-tech">Cloud VM</span><span class="proj-tech">Python</span><span class="proj-tech">Log Forwarding</span><span class="proj-tech">Host Hardening</span><span class="proj-tech">Threat Intel</span></div>
-      <a href="https://github.com/ashley-wenwa/simple-honeypot" target="_blank" rel="noopener" class="proj-link">
-        <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-        View on GitHub &rarr;
-      </a>
+      <p>A Python TCP honeypot that listens on a fake service port, logs every connection's IP and timestamp, and responds with a warning to the attacker. Logs are saved to <code style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--lime)">honeypot.log</code> for analysis.</p>
+      <div class="pc-stack"><span class="ptag">Python</span><span class="ptag">TCP Sockets</span><span class="ptag">Connection Logging</span><span class="ptag">Threat Intel</span></div>
+      <div class="pb pb-done">Complete &mdash; Apr 2025</div>
+      <a href="https://github.com/ashley-wenwa/simple-honeypot" target="_blank" rel="noopener" class="pc-link">View on GitHub &rarr;</a>
     </div>
-    <div class="proj-card reveal reveal-d2">
-      <div class="proj-top"><span class="proj-num">03 / 03</span><span class="proj-badge badge-done">Complete</span></div>
-      <h3>Python Port Scanner</h3>
-      <p>A multi-threaded port scanner supporting TCP connect scan, UDP scan, and service banner grabbing. Scans common ports with multithreading for fast results. Tested against local VMs and simulated vulnerable machines to validate accuracy and performance.</p>
-      <div class="proj-stack"><span class="proj-tech">Python</span><span class="proj-tech">TCP/UDP</span><span class="proj-tech">Multithreading</span><span class="proj-tech">Banner Grabbing</span></div>
-      <a href="https://github.com/ashley-wenwa/simple-port-scanner" target="_blank" rel="noopener" class="proj-link">
-        <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-        View on GitHub &rarr;
-      </a>
+
+    <!-- 3 PORT SCANNER -->
+    <div class="pc rv d2" data-cat="security">
+      <div class="pc-top"><span class="pc-num">03</span><span class="pc-cat cat-sec">Security</span></div>
+      <h3>Port Scanner</h3>
+      <p>A CLI TCP port scanner in Python with a customisable port range. Scans a target host, identifies open ports, and reports results. Lightweight and beginner-friendly — tested against local VMs and simulated targets.</p>
+      <div class="pc-stack"><span class="ptag">Python</span><span class="ptag">TCP Scanning</span><span class="ptag">CLI</span><span class="ptag">Networking</span></div>
+      <div class="pb pb-done">Complete &mdash; Mar 2025</div>
+      <a href="https://github.com/ashley-wenwa/simple-port-scanner" target="_blank" rel="noopener" class="pc-link">View on GitHub &rarr;</a>
     </div>
+
+    <!-- 4 MALWARE ANALYSIS -->
+    <div class="pc rv d1" data-cat="security">
+      <div class="pc-top"><span class="pc-num">04</span><span class="pc-cat cat-sec">Security</span></div>
+      <h3>Malware Analysis Lab</h3>
+      <p>Static and dynamic analysis of malware samples in an isolated sandbox environment. Documents indicators of compromise (IOCs), behaviour patterns, and mitigation strategies with full technical write-ups for each sample.</p>
+      <div class="pc-stack"><span class="ptag">Kali Linux</span><span class="ptag">Dynamic Analysis</span><span class="ptag">IOC</span><span class="ptag">Sandbox</span><span class="ptag">Static Analysis</span></div>
+      <div class="pb pb-done">Complete</div>
+      <a href="https://github.com/ashley-wenwa/malware-analysis" target="_blank" rel="noopener" class="pc-link">View on GitHub &rarr;</a>
+    </div>
+
+    <!-- 5 PASSWORD GENERATOR -->
+    <div class="pc rv d2" data-cat="dev">
+      <div class="pc-top"><span class="pc-num">05</span><span class="pc-cat cat-dev">Dev Tool</span></div>
+      <h3>Password Generator</h3>
+      <p>A CLI script that generates strong, random passwords of customisable length using uppercase, lowercase, digits, and special characters. Quick to run, no dependencies beyond Python 3.</p>
+      <div class="pc-stack"><span class="ptag">Python</span><span class="ptag">CLI</span><span class="ptag">Cryptography</span><span class="ptag">Security Tooling</span></div>
+      <div class="pb pb-done">Complete</div>
+      <a href="https://github.com/ashley-wenwa/password_generator" target="_blank" rel="noopener" class="pc-link">View on GitHub &rarr;</a>
+    </div>
+
+    <!-- 6 PASSWORD MANAGER -->
+    <div class="pc rv d3" data-cat="dev">
+      <div class="pc-top"><span class="pc-num">06</span><span class="pc-cat cat-dev">Dev Tool</span></div>
+      <h3>Password Manager</h3>
+      <p>A console-based password manager built in Java with AES encryption for secure credential storage. Supports adding and retrieving passwords by site name — demonstrating understanding of encryption principles at the application layer.</p>
+      <div class="pc-stack"><span class="ptag">Java</span><span class="ptag">AES Encryption</span><span class="ptag">Secure Storage</span><span class="ptag">CLI</span></div>
+      <div class="pb pb-done">Complete</div>
+      <a href="https://github.com/ashley-wenwa/password-manager" target="_blank" rel="noopener" class="pc-link">View on GitHub &rarr;</a>
+    </div>
+
   </div>
 </section>
 
